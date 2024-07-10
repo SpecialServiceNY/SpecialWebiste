@@ -1,0 +1,10 @@
+.homepage {
+  max-width: 1200px; /* 可选的，设置一个最大宽度 */
+  margin: 0 auto; /* 让容器居中 */
+  padding: 0 10px; /* 为容器添加一些内边距 */
+}
+
+.card-section + .card-section {
+  margin-top: 20px;
+}
+

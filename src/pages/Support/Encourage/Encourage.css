@@ -1,0 +1,14 @@
+.encourage-page {
+  margin: 0 auto; /* 居中显示 */
+  padding: 20px; /* 页面内边距 */
+  text-align: center; /* 文本居中 */
+  margin-bottom: 60px; /* 底部间距 */
+}
+
+.balloon-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自适应列布局，每列最小宽度200px */
+  gap: 20px; /* 列之间的间隔 */
+  margin-top: 20px; /* 顶部间距 */
+  margin-bottom:200px;
+}

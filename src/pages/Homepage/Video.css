@@ -1,0 +1,108 @@
+.content-area {
+  padding-bottom: 60px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gif {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: black;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.top-right-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.486);
+  padding: 20px;
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.separator {
+  border-top: 2px solid white;
+  width: 100%;
+}
+
+.smaller-text {
+  font-size: 25px;
+}
+#Prevalence {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+.roadmap-section {
+  /* Add styles for each section in the roadmap */
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.roadmap-section img {
+  /* Style for the thumbnail images */
+  width: 100%;
+  height: auto;
+}
+
+.section-title {
+  /* Style for the title of each section */
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.modal-content {
+  /* Style for the modal content */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  /* Style for the modal title */
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  /* Style for the modal content paragraphs */
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  /* Style for the modal close button */
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+}

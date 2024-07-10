@@ -1,0 +1,68 @@
+.contact-subpage {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 50px; /* 添加底部外边距 */
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  background-color: #d4edda; /* 修改后的背景颜色 */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 40px 0;
+  padding: 10px;
+  gap: 20px; /* 添加间距 */
+}
+
+.contact-logo {
+  flex: 0 0 30%; /* 占用三分之一宽度 */
+  max-width: 30%;
+  height: auto;
+}
+
+.contact-info {
+  flex: 1;
+  background-color: #ffffff; /* 添加文字背景颜色 */
+  padding: 10px;
+  border-radius: 10px; /* 文字背景圆角 */
+}
+
+.contact-info h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.contact-info p {
+  margin: 0 0 10px;
+  color: #000; /* 设置文字颜色为黑色 */
+  text-align: left; /* 文字左对齐 */
+}
+
+.contact-info a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007BFF;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}

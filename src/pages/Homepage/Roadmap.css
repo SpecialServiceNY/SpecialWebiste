@@ -1,0 +1,57 @@
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.roadmap-image {
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.hotspot {
+  position: absolute;
+  background: rgba(0, 123, 255, 0.8);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hotspot:hover {
+  background: rgba(0, 123, 255, 1);
+  transform: scale(1.1);
+}
+
+.ppt-container {
+  width: 60%;
+  margin-top: 20px;
+}
+
+.ppt-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

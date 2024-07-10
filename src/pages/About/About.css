@@ -1,0 +1,79 @@
+.about-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  width: 80%;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 20px; /* 增加标题和内容的间隔 */
+  color: #0056b3; /* 标题颜色 */
+  cursor: pointer;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
+.click-for-details {
+  font-size: 0.5em;
+  color: #1e90ff; /* 比较亮的蓝色 */
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.about-me {
+  background-color: #f0f8ff; /* 柔和的背景颜色 */
+}
+
+.about-project {
+  background-color: #e6f7ff; /* 柔和的背景颜色 */
+}
+
+.about-me-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.about-me-content .photo {
+  margin-bottom: 20px; /* 调整图片与文字之间的间距 */
+  flex: 0 0 auto;
+}
+
+.name {
+  font-size: 1.5em; /* 调整名字的字体大小 */
+  font-weight: bold; /* 加粗名字 */
+  margin-top: 10px; /* 调整名字与图片之间的间距 */
+}
+
+.about-me-content .intro {
+  flex: 1;
+}
+
+.about-me-content .intro p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #333;
+}

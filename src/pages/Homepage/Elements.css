@@ -1,0 +1,124 @@
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.element-card {
+  flex: 0 0 calc(33.333% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  height: 350px; /* 固定高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.element-card:hover {
+  transform: scale(1.05);
+}
+
+.element-thumbnail {
+  width: 100%;
+  height: 240px; /* 增加图片高度 */
+  border-radius: 5px;
+  object-fit: cover; /* 保持图像比例 */
+}
+
+.element-card h3 {
+  margin: 10px 0;
+  font-size: 20px; /* 增大标题字体 */
+  color: #333;
+}
+
+.element-card button {
+  padding: 10px 20px;
+  margin-top: auto; /* 将按钮推到卡片底部 */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px; /* 增大按钮字体 */
+}
+
+.element-card button:hover {
+  background-color: #0056b3;
+}
+
+.element-details {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.element-details .background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: 1;
+}
+
+.element-details .details-content {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色板 */
+  padding: 10px;
+  border-radius: 10px;
+  overflow-y: auto; /* 超过固定高度时出现滚动条 */
+  height: 100%;
+}
+
+.element-details p {
+  margin-bottom: 10px;
+  font-size: 16px; /* 增大文字字体 */
+}
+
+.element-details .link-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 16px; /* 增大链接字体 */
+}
+
+.element-details .link-button span {
+  margin-left: 5px;
+}
+
+.element-details .link-button svg {
+  width: 24px;
+  height: 24px;
+  color: #007bff;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .element-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .element-card {
+    flex: 0 0 100%;
+  }
+}

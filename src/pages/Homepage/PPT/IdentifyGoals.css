@@ -1,0 +1,73 @@
+.ppt-slide {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* 设置最小高度为视口高度 */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  overflow: auto; /* 添加滚动条 */
+  z-index: 0; /* 设置一个较低的 z-index */
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 使用百分比高度 */
+  background-color: rgba(156, 155, 155, 0.5); /* 调整透明度以实现模糊效果 */
+  backdrop-filter: blur(5px); /* 调整模糊半径 */
+  z-index: -1; /* 设置一个更低的 z-index 以确保在内容上方 */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background-color: rgba(48, 47, 47, 0.6); 
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2.5rem; /* 调整标题字体大小 */
+  margin-top: 60px; /* 增加标题上方的间距 */
+  margin-bottom: 20px; /* 增加标题下方的间距 */
+  text-align: center; /* 确保标题居中 */
+}
+
+.resources {
+  text-align: left;
+  position: relative; /* 确保资源列表在蒙版之上 */
+  z-index: 2;
+}
+
+.resources h2 {
+  color: #00aaff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resources li {
+  margin-bottom: 10px;
+}
+
+.resources a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.resources a:hover {
+  text-decoration: underline;
+}

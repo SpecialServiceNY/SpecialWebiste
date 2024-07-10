@@ -1,0 +1,107 @@
+.legally-blind-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.highlighted {
+  font-weight: bold;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.content-card {
+  flex: 1 1 calc(50% - 20px); /* Each card takes up half of the container width, minus the gap */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 500px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #e4f3f6;
+}
+
+
+.image-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+.chart-image {
+  width: 80%;
+  height: auto;
+  cursor: pointer;
+}
+
+.chart-image.zoomed {
+  cursor: grab;
+  transform: scale(2);
+}
+
+.zoom-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vision-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vision-image {
+  width: 100%;
+  height: auto;
+}
+
+.toggle-video-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.toggle-video-button:hover {
+  background-color: #0056b3;
+}

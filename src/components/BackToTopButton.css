@@ -1,0 +1,21 @@
+#backToTopButton {
+  display: none; /* Initially hidden */
+  position: fixed; /* Fixed position */
+  bottom: 60px; /* Distance from bottom */
+  right: 20px; /* Distance from right */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  z-index: 1000; /* Ensure it's above other content */
+  font-size:18px;
+
+  /* Hover effect */
+  cursor: pointer;
+}
+
+#backToTopButton:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}

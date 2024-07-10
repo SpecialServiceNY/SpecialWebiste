@@ -1,0 +1,58 @@
+.discover-page {
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+}
+
+.overview {
+  margin-bottom: 60px;
+}
+
+.overview h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.overview p {
+  font-size: 1rem;
+}
+
+.aspects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.aspect {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.aspect-box {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.aspect-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.aspect-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

@@ -1,0 +1,43 @@
+.balloon-wrapper {
+  position: relative;
+  width: 100px; /* 调整为你需要的大小 */
+  height: 100px; /* 调整为你需要的大小 */
+  margin: 20px; /* 调整为适当的间距 */
+}
+
+.balloon, .popped-balloon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.balloon i, .popped-balloon i {
+  font-size: 48px; /* 调整为适合你图标的大小 */
+  color: #3498db; /* 调整为你希望的颜色 */
+}
+
+.balloon-number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #e74c3c;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.popped-balloon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}

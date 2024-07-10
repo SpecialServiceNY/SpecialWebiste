@@ -1,0 +1,71 @@
+.content-area {
+  padding-bottom: 60px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gif {
+  width: 100%;
+  height: auto;
+}
+
+.top-right-container {
+  position: absolute;
+  font-weight: bold;
+  color: black;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.486);
+  padding: 20px;
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.separator {
+  border-top: 2px solid white;
+  width: 100%;
+}
+
+.smaller-text {
+  font-size: 25px;
+}
+
+.navigation-info {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.navigation-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation-list li {
+  cursor: pointer;
+  color: #333;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.navigation-list li:hover {
+  color: #555;
+}
+
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #333;
+  margin-top: 30px;
+}
+
+.section h2:hover {
+  color: #555;
+}

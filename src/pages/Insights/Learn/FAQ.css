@@ -1,0 +1,12 @@
+.faq-page {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 10px;
+  margin-bottom:60px;
+}
+
+.faq-page .faq-card {
+  flex: 1 1 calc(33.333% - 20px); /* 每个卡片占屏幕宽度的三分之一，并留出间距 */
+  box-sizing: border-box;
+}

@@ -1,0 +1,55 @@
+.ppt-slide {
+  position: relative;
+  background-image: url('file:///C:/Users/FeNis/my-interactive-website/public/connected.jpg');
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  overflow-y: auto; /* 当内容超出时显示垂直滚动条 */
+  background-color: rgba(48, 47, 47, 0.6); /* 添加深灰色的遮罩效果 */
+  backdrop-filter: blur(5px); /* 可选：调整模糊效果 */
+}
+
+.title {
+  font-size: 2.5rem; /* 调整标题字体大小 */
+  margin-top: 60px; /* 确保标题上方没有多余间距 */
+  margin-bottom: 20px; /* 增加标题下方的间距 */
+  text-align: center; /* 确保标题居中 */
+}
+
+.resources {
+  position: relative; /* 确保资源列表在蒙版之上 */
+  z-index: 2;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.resources p {
+  margin-top: 20px;
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resources li {
+  margin-bottom: 20px;
+}
+
+.resources a {
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 1.1rem; /* 增加链接字体大小 */
+}
+
+.resources a:hover {
+  text-decoration: underline;
+}

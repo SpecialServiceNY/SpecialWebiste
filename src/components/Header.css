@@ -1,0 +1,53 @@
+.header {
+  padding: 80px;
+  display: flex;
+  justify-content: flex-start; /* Align items to the start of the container */
+  align-items: flex-start; /* Align items to the start of the container */
+}
+
+.title-container {
+  width: 100%; /* Ensure the container spans the full width */
+  text-align: left; /* Ensure text inside is left-aligned */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0; /* Remove margin */
+}
+
+.tagline {
+  font-size: 24px;
+  color: #333;
+  margin: 0; /* Remove margin */
+}
+
+.braille {
+  font-size: 14px;
+  color: #888;
+  margin-left: 5px;
+}
+
+.controls-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.font-control {
+  font-size: 24px;
+  padding: 8px 12px;
+  margin-right: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.font-control:hover {
+  background-color: #45a049;
+}

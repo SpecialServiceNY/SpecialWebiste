@@ -1,0 +1,120 @@
+.navbar {
+  position: relative;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 调整为底部对齐 */
+  background-size: cover; /* 确保图片覆盖整个背景 */
+  background-position: center; /* 显示图片底端 */
+  font-size: 18px; /* 增加字体大小 */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left:10px;
+}
+
+.menu-item {
+  position: relative;
+  padding: 5px 10px;
+}
+
+.menu-item > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 26px; /* 放大主菜单字体大小 */
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* 垂直对齐图标和文字 */
+}
+
+.menu-item > a > .fa-icon {
+  margin-right: 12px; /* 增加图标与文字之间的间距 */
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* 调整子菜单背景颜色，并增加透明度 */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  z-index: 10; /* 确保下拉菜单显示在其他内容上方 */
+  width: 200px; /* 调整子菜单宽度 */
+}
+
+.submenu li {
+  padding: 8px 0; /* 调整每个子菜单项的上下内边距 */
+}
+
+.submenu li a {
+  color: white; /* 设置子菜单项链接文字颜色 */
+  text-decoration: none; /* 去除链接下划线 */
+  display: block; /* 让链接占据整个li的空间 */
+  padding: 8px 20px; /* 调整链接的内边距 */
+  font-weight: bold;
+}
+
+.submenu li:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* 悬停时的背景颜色 */
+  cursor: pointer;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.search-container {
+  position: relative;
+  margin-right: 20px; /* 调整搜索栏与菜单项之间的间距 */
+  display: flex;
+  align-items: center; /* 垂直居中 */
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.search-icon {
+  margin-left: 10px; /* 调整搜索图标与输入框之间的间距 */
+  cursor: pointer;
+  font-size: 20px; /* 增大图标大小 */
+  color: white; /* 设置图标颜色为白色 */
+}
+
+.search-results {
+  display: none; /* 默认隐藏搜索结果 */
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 8px 10px;
+}
+
+.search-results li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
