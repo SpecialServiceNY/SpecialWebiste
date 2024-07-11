@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { useHighContrast } from '../../../components/HighContrastContext';
 import './Service.css';
 
 const Service = () => {
-  // 定义每个类别的选项
+  const { isHighContrast } = useHighContrast();
   const locations = [
     { id: 1, text: 'Manhattan', image: 'https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_391,q_75,w_588/v1/clients/newyorkstate/mariograzianophotography_Instagram_11d7bfa9-c11f-4feb-a919-13d479b99fd2.jpg' },
     { id: 2, text: 'Brooklyn', image: 'https://images.ctfassets.net/1aemqu6a6t65/68nkexvLlGiTxvxFvzoELk/68ee51265baad76b8d7f5ae8cd99bf2c/brooklyn-bridge-sunset-julienne-schaer.jpg' },
@@ -46,7 +47,6 @@ const Service = () => {
   };
 
   const handleGoButtonClick = () => {
-    // 根据选择的选项执行搜索逻辑，这里是一个示例，实际项目中可能从API获取搜索结果
     const results = [
       { id: 1, text: 'Search Result 1', description: 'Description of Search Result 1', imageUrl: '/images/result1.jpg' },
       { id: 2, text: 'Search Result 2', description: 'Description of Search Result 2', imageUrl: '/images/result2.jpg' },
@@ -56,66 +56,78 @@ const Service = () => {
   };
 
   return (
-    <div className="search-page">
-       <div className="options-row">
-        <div className="option-group">
-          <div className="option-title">Locations</div>
-          {locations.map(option => (
-            <div
-              key={option.id}
-              className={`option ${selectedLocation === option.id ? 'selected' : ''}`}
-              onClick={() => handleLocationSelect(option.id)}
-            >
-              <img src={option.image} alt={option.text} />
-              <div>{option.text}</div>
+    <div className={isHighContrast ? 'high-contrast' : ''}>
+      <div className="search-page">
+        <header className="service-header">
+          <h1>Special Programs Search Tool</h1>
+          <p>Use this tool to find services that match your specific needs. Select your location, age range, and service type, then click on the GO button. Your result(s) will appear below.</p>
+        </header>
+        <div className="options-container">
+          <div className="options-group">
+            <div className="option-title">Locations</div>
+            <div className="options-row">
+              {locations.map(option => (
+                <div
+                  key={option.id}
+                  className={`option ${selectedLocation === option.id ? 'selected' : ''}`}
+                  onClick={() => handleLocationSelect(option.id)}
+                >
+                  <img src={option.image} alt={option.text} />
+                  <div>{option.text}</div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="option-group">
-          <div className="option-title">Age Ranges</div>
-          {ageRanges.map(option => (
-            <div
-              key={option.id}
-              className={`option ${selectedAgeRange === option.id ? 'selected' : ''}`}
-              onClick={() => handleAgeRangeSelect(option.id)}
-            >
-              <img src={option.image} alt={option.text} />
-              <div>{option.text}</div>
+          </div>
+          <div className="options-group">
+            <div className="option-title">Age Ranges</div>
+            <div className="options-row">
+              {ageRanges.map(option => (
+                <div
+                  key={option.id}
+                  className={`option ${selectedAgeRange === option.id ? 'selected' : ''}`}
+                  onClick={() => handleAgeRangeSelect(option.id)}
+                >
+                  <img src={option.image} alt={option.text} />
+                  <div>{option.text}</div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="option-group">
-          <div className="option-title">Service Types</div>
-          {serviceTypes.map(option => (
-            <div
-              key={option.id}
-              className={`option ${selectedServiceType === option.id ? 'selected' : ''}`}
-              onClick={() => handleServiceTypeSelect(option.id)}
-            >
-              <img src={option.image} alt={option.text} />
-              <div>{option.text}</div>
+          </div>
+          <div className="options-group">
+            <div className="option-title">Service Types</div>
+            <div className="options-row">
+              {serviceTypes.map(option => (
+                <div
+                  key={option.id}
+                  className={`option ${selectedServiceType === option.id ? 'selected' : ''}`}
+                  onClick={() => handleServiceTypeSelect(option.id)}
+                >
+                  <img src={option.image} alt={option.text} />
+                  <div>{option.text}</div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
+
+        {selectedLocation && selectedAgeRange && selectedServiceType && (
+          <button className="go-button" onClick={handleGoButtonClick}>
+            GO
+          </button>
+        )}
+
+        {searchResults.length > 0 && (
+          <div className="search-results">
+            {searchResults.map((result) => (
+              <div key={result.id} className="result">
+                <img src={result.imageUrl} alt={result.text} />
+                <h3>{result.text}</h3>
+                <p>{result.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-
-      {selectedLocation && selectedAgeRange && selectedServiceType && (
-        <button className="go-button" onClick={handleGoButtonClick}>
-          GO
-        </button>
-      )}
-
-      {searchResults.length > 0 && (
-        <div className="search-results">
-          {searchResults.map((result) => (
-            <div key={result.id} className="result">
-              <img src={result.imageUrl} alt={result.text} />
-              <h3>{result.text}</h3>
-              <p>{result.description}</p>
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   );
 };

@@ -1,80 +1,43 @@
-import React, { useState } from 'react';
-import './Insights.css';
+import React from 'react';
+import { useHighContrast } from '../../components/HighContrastContext';
+import { Link } from 'react-router-dom';
+import './Insights.css'; // Assuming you have a CSS file for styling
 
-function Forum() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [posts, setPosts] = useState([
-    { id: 1, title: 'Welcome to the forum', content: 'This is the first post.', author: 'Admin' },
-    { id: 2, title: 'Second post', content: 'This is another post.', author: 'User1' },
-    { id: 3, title: 'Tech post', content: 'Discussing technology.', author: 'TechGuru' },
-  ]);
-  const [newPost, setNewPost] = useState({ name: '', title: '', content: '' });
+const Insights = () => {
+  const { isHighContrast } = useHighContrast();
 
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewPost(prevPost => ({
-      ...prevPost,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newId = posts.length + 1;
-    const newPostWithId = { ...newPost, id: newId, author: 'New User' };
-    setPosts([...posts, newPostWithId]);
-    setNewPost({ name: '', title: '', content: '' });
-  };
-
-  const filteredPosts = posts.filter(post =>
-    post.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const sections = [
+    {
+      title: 'Learn',
+      description: 'Welcome to our "Learn" section! Explore a wealth of knowledge about visually impaired individuals, diving into their experiences, challenges, and achievements.',
+      link: '/insights/learn',
+      backgroundColor: '#FDF6C9', // Light red
+    },
+    {
+      title: 'History',
+      description: 'Explore the transformative journey of the visually impaired in America, from early marginalization to today\'s support and technological advancements, uncovering key milestones in societal evolution.',
+      link: '/insights/history',
+      backgroundColor: '#d1ecf1', // Light blue
+    },
+    {
+      title: 'Experience',
+      description: 'Engage in an interactive game to learn about assistive technologies for the visually impaired, discovering innovative solutions and their impact.',
+      link: '/insights/experience',
+      backgroundColor: '#d4edda', // Light green
+    },
+  ];
 
   return (
-    <div className="forum-page">
-      <header>
-        <input
-          type="text"
-          placeholder="Search posts..."
-          value={searchTerm}
-          onChange={handleSearch}
-        />
-      </header>
-      <section className="posts-list">
-        {filteredPosts.map(post => (
-          <div key={post.id} className="post">
-            <h3>{post.title}</h3>
-            <p>{post.content}</p>
-            <p><strong>{post.author}</strong></p>
-          </div>
-        ))}
-      </section>
-      <footer>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="title"
-            placeholder="Post Title"
-            value={newPost.title}
-            onChange={handleInputChange}
-            required
-          />
-          <textarea
-            name="content"
-            placeholder="Write your post here..."
-            value={newPost.content}
-            onChange={handleInputChange}
-            required
-          />
-          <button type="submit">Submit</button>
-        </form>
-      </footer>
+    <div className={isHighContrast ? 'high-contrast insights-page' : 'insights-page'}>
+      {sections.map((section, index) => (
+        <div key={index} className="section-card" style={{ backgroundColor: section.backgroundColor }}>
+          <h2 className="section-title">{section.title}</h2>
+          <p className="section-description">{section.description}</p>
+          <Link to={section.link} className="section-link">Explore {section.title}</Link>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
-export default Forum;
+export default Insights;

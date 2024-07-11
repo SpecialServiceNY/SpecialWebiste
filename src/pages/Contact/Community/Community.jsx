@@ -1,8 +1,10 @@
 import React from 'react';
+import { useHighContrast } from '../../../components/HighContrastContext';
 import { Link } from 'react-router-dom';
 import './Community.css';
 
 const Community = () => {
+  const { isHighContrast } = useHighContrast();
   const contacts = [
     {
       name: 'Harlem Independent Living Center',
@@ -55,6 +57,7 @@ const Community = () => {
   ];
 
   return (
+    <div className={isHighContrast ? 'high-contrast' : ''}>
     <div className="contact-subpage">
       <h1>Community</h1>
       <ul className="contact-list">
@@ -70,6 +73,7 @@ const Community = () => {
         ))}
       </ul>
       <Link to="/contact" className="back-button">Back to Contact Page</Link>
+    </div>
     </div>
   );
 };

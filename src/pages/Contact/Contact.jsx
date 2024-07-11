@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHighContrast } from '../../components/HighContrastContext';
 import { Link } from 'react-router-dom';
 import CardSectionContact from './CardSectionContact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +7,7 @@ import { faUsers, faBuilding, faHandsHelping } from '@fortawesome/free-solid-svg
 import './Contact.css';
 
 const Contact = () => {
+  const { isHighContrast } = useHighContrast();
   const sections = [
     {
       title: 'Community',
@@ -31,6 +33,7 @@ const Contact = () => {
   ];
 
   return (
+    <div className={isHighContrast ? 'high-contrast' : ''}>
     <div className="contact-page">
       {sections.map((section, index) => (
         <CardSectionContact key={index} title={section.title} content={section.description} backgroundColor={section.backgroundColor}>
@@ -38,6 +41,7 @@ const Contact = () => {
           <Link to={section.link} className="contact-link">Learn More</Link>
         </CardSectionContact>
       ))}
+    </div>
     </div>
   );
 };

@@ -1,91 +1,49 @@
-.forum-page {
+.support-page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  align-items: center;
+  margin: 20px;
 }
 
-header {
-  padding: 10px;
-  background-color: #f1f1f1;
+.section-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
   text-align: center;
+  margin-bottom: 20px; /* Add margin between cards */
 }
 
-header input {
-  width: 80%;
-  padding: 10px;
-  font-size: 16px;
+.section-title {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.main-content {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
+.section-description {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 15px;
 }
 
-.topics-list {
-  width: 25%;
-  background-color: #f9f9f9;
-  padding: 20px;
-  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+.section-link {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.topics-list ul {
-  list-style-type: none;
-  padding: 0;
+.section-link:hover {
+  color: #0056b3;
 }
 
-.topics-list li {
-  padding: 10px;
-  cursor: pointer;
+.high-contrast .section-card {
+  background-color: #000;
+  color: #fff;
 }
 
-.topics-list li.selected {
-  background-color: #007bff;
-  color: white;
-}
-
-.posts-list {
-  width: 75%;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.post {
-  border-bottom: 1px solid #e1e1e1;
-  padding: 10px 0;
-}
-
-footer {
-  padding: 20px;
-  background-color: #f1f1f1;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-footer form {
-  display: flex;
-  flex-direction: column;
-}
-
-footer input,
-footer textarea,
-footer select,
-footer button {
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 16px;
-}
-
-footer textarea {
-  resize: vertical;
-}
-
-footer button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-footer button:hover {
-  background-color: #0056b3;
+.high-contrast .section-link {
+  color: #39ff14; /* Green color in high contrast mode */
 }
