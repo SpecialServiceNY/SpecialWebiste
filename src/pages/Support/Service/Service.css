@@ -1,6 +1,7 @@
 .search-page {
   padding: 20px;
   margin-bottom: 60px;
+  position: relative; /* 让搜索结果卡片相对于.search-page定位 */
 }
 
 .service-header {
@@ -81,28 +82,38 @@
 }
 
 .search-results {
+  width: 100%;
   margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: flex-start; 
+  position: absolute; 
+  bottom: 0; 
+  margin-bottom:60px;
 }
 
-.result {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-}
 
 .result img {
-  width: 100%;
+  width: 33.33%; /* 图片占据卡片的三分之一宽度 */
+  display: flex;
+  flex-wrap: wrap;
   height: auto;
   border-radius: 5px;
+  object-fit: cover;
+}
+
+.result-details {
+  width: 66.67%; /* 右侧内容占据卡片的三分之二宽度 */
+  padding-left: 10px; /* 左侧边距增加 */
 }
 
 .result h3 {
   margin-top: 10px;
+  text-align: left; /* 文字左对齐 */
 }
 
 .result p {
   margin-top: 5px;
+  text-align: left; /* 文字左对齐 */
 }

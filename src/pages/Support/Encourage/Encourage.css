@@ -1,14 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .encourage-page {
-  margin: 0 auto; /* 居中显示 */
-  padding: 20px; /* 页面内边距 */
-  text-align: center; /* 文本居中 */
-  margin-bottom: 60px; /* 底部间距 */
+  background-image: url('https://wallpapers.com/images/hd/bubbles-background-xvtqhlirxxqtttp7.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px; /* Ensure title text doesn't overlap */
+  font-family: 'Roboto', sans-serif; /* Change font */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Add shadow */
+  position: relative; /* Ensure relative positioning */
+}
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(236, 226, 226, 0.418); /* Semi-transparent black background */
+  z-index: -1; /* Ensure it stays behind the background image */
+}
+.page-title {
+  margin-bottom: 20px;
 }
 
-.balloon-container {
+.bubble-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自适应列布局，每列最小宽度200px */
-  gap: 20px; /* 列之间的间隔 */
-  margin-top: 20px; /* 顶部间距 */
-  margin-bottom:200px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 使用自适应网格布局 */
+  gap: 20px; /* 调整间距 */
+}
+
+.bubble {
+  position: relative; /* 使用相对定位 */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  border: 2px solid #fff; /* 添加边框 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.bubble:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.bubble-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* 圆形包裹 */
+  background-color: rgba(150, 255, 255, 0.5); /* 添加半透明背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* 始终显示 */
+}
+
+.bubble-content {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px; /* 调整文字大小 */
+}
+
+.bubble.popped {
+  position: absolute; /* 固定位置 */
+  width: 450px; /* 点击后变成更大的气泡 */
+  height: 450px; /* 自动高度 */
+  top: 50%; /* 居中显示 */
+  left: 50%; /* 居中显示 */
+  transform: translate(-50%, -50%); /* 居中显示 */
+  background-color: rgba(255, 255, 255, 0.8); /* 背景颜色 */
+  padding: 40px; /* 内边距 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+  z-index: 1;
+}
+
+.bubble.popped h1 {
+  font-size: 36px; /* Adjusted font size when popped */
+  color: red; /* 变成红色 */
 }

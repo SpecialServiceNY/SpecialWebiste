@@ -1,91 +1,41 @@
-.forum-page {
+.game-homepage {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  background-color: #f0f0f0;
 }
 
-header {
-  padding: 10px;
-  background-color: #f1f1f1;
+.game-card {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-header input {
-  width: 80%;
-  padding: 10px;
-  font-size: 16px;
+.game-card h2 {
+  color: #333333;
+  font-size: 1.5em;
+  margin-top: 0;
 }
 
-.main-content {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
+.game-card p {
+  color: #666666;
 }
 
-.topics-list {
-  width: 25%;
-  background-color: #f9f9f9;
-  padding: 20px;
-  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.topics-list ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.topics-list li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.topics-list li.selected {
-  background-color: #007bff;
+.start-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
   color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 15px;
 }
 
-.posts-list {
-  width: 75%;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.post {
-  border-bottom: 1px solid #e1e1e1;
-  padding: 10px 0;
-}
-
-footer {
-  padding: 20px;
-  background-color: #f1f1f1;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-footer form {
-  display: flex;
-  flex-direction: column;
-}
-
-footer input,
-footer textarea,
-footer select,
-footer button {
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 16px;
-}
-
-footer textarea {
-  resize: vertical;
-}
-
-footer button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-footer button:hover {
-  background-color: #0056b3;
+.start-button:hover {
+  background-color: #45a049;
 }

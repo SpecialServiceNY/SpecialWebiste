@@ -16,9 +16,6 @@ import Definition from './pages/Insights/Learn/Definition';
 import Occupation from './pages/Insights/Learn/Occupation';
 import FAQ from './pages/Insights/Learn/FAQ';
 import Encourage from './pages/Support/Encourage/Encourage';
-import Balloon1 from './pages/Support/Encourage/Balloon1';
-import Balloon2 from './pages/Support/Encourage/Balloon2';
-import Balloon3 from './pages/Support/Encourage/Balloon3';
 import Contact from './pages/Contact/Contact';
 import Community from './pages/Contact/Community/Community';
 import Organization from './pages/Contact/Organization/Organization';
@@ -51,9 +48,6 @@ function App() {
               <Route path="/Insights/Learn/FAQ" element={<FAQ />} />
               <Route path="/Support/Service" element={<Service />} />
               <Route path="/Support/Encourage" element={<Encourage />} />
-              <Route path="/Support/Balloon1" element={<Balloon1 />} />
-              <Route path="/Support/Balloon2" element={<Balloon2 />} />
-              <Route path="/Support/Balloon3" element={<Balloon3 />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/Contact/Community" element={<Community />} />
               <Route path="/Contact/Organization" element={<Organization />} />

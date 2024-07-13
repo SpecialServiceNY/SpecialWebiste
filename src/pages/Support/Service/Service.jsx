@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHighContrast } from '../../../components/HighContrastContext';
+import SearchResultsContainer from './SearchResults';
 import './Service.css';
 
 const Service = () => {
@@ -47,12 +48,21 @@ const Service = () => {
   };
 
   const handleGoButtonClick = () => {
-    const results = [
-      { id: 1, text: 'Search Result 1', description: 'Description of Search Result 1', imageUrl: '/images/result1.jpg' },
-      { id: 2, text: 'Search Result 2', description: 'Description of Search Result 2', imageUrl: '/images/result2.jpg' },
-      { id: 3, text: 'Search Result 3', description: 'Description of Search Result 3', imageUrl: '/images/result3.jpg' },
-    ];
-    setSearchResults(results);
+    // Simulating search results based on selected criteria
+    if (selectedLocation === 1 && selectedAgeRange === 3 && selectedServiceType === 4) {
+      const results = [
+        {
+          id: 1,
+          text: 'Business Enterprise Program (BEP)',
+          description: 'The New York State Commission for the Blind (NYSCB)’s Business Enterprise Program (BEP) provides a rigorous BEP vendor training program that teaches NYSCB participants to successfully manage a deli, vending operation, newsstand, snack bar or cafeteria. Participants learn business math, labor and merchandise management, purchasing, legal requirements and customer service.',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJb8McuHIzgG6vQlk2swLzHbs0Owv2EqM3gA&s',
+          website: 'https://ocfs.ny.gov/programs/nyscb/programs/enterprise.php'
+        }
+      ];
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
+    }
   };
 
   return (
@@ -63,6 +73,7 @@ const Service = () => {
           <p>Use this tool to find services that match your specific needs. Select your location, age range, and service type, then click on the GO button. Your result(s) will appear below.</p>
         </header>
         <div className="options-container">
+          {/* Locations selection */}
           <div className="options-group">
             <div className="option-title">Locations</div>
             <div className="options-row">
@@ -78,6 +89,7 @@ const Service = () => {
               ))}
             </div>
           </div>
+          {/* Age ranges selection */}
           <div className="options-group">
             <div className="option-title">Age Ranges</div>
             <div className="options-row">
@@ -93,6 +105,7 @@ const Service = () => {
               ))}
             </div>
           </div>
+          {/* Service types selection */}
           <div className="options-group">
             <div className="option-title">Service Types</div>
             <div className="options-row">
@@ -110,19 +123,24 @@ const Service = () => {
           </div>
         </div>
 
-        {selectedLocation && selectedAgeRange && selectedServiceType && (
-          <button className="go-button" onClick={handleGoButtonClick}>
-            GO
-          </button>
-        )}
+        {/* GO button */}
+        <button className="go-button" onClick={handleGoButtonClick}>
+          GO
+        </button>
 
+        {/* Search results */}
         {searchResults.length > 0 && (
           <div className="search-results">
             {searchResults.map((result) => (
-              <div key={result.id} className="result">
-                <img src={result.imageUrl} alt={result.text} />
-                <h3>{result.text}</h3>
-                <p>{result.description}</p>
+              <div key={result.id} className="result-card">
+                <div className="result-image">
+                  <img src={result.imageUrl} alt={result.text} />
+                </div>
+                <div className="result-details">
+                  <h3>{result.text}</h3>
+                  <p>{result.description}</p>
+                  <a href={result.website} target="_blank" rel="noopener noreferrer">Website</a>
+                </div>
               </div>
             ))}
           </div>
