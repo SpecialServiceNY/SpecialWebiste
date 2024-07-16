@@ -16,6 +16,7 @@ import Definition from './pages/Insights/Learn/Definition';
 import Occupation from './pages/Insights/Learn/Occupation';
 import FAQ from './pages/Insights/Learn/FAQ';
 import Encourage from './pages/Support/Encourage/Encourage';
+import Technology from './pages/Support/Technology/Technology';
 import Contact from './pages/Contact/Contact';
 import Community from './pages/Contact/Community/Community';
 import Organization from './pages/Contact/Organization/Organization';
@@ -39,7 +40,6 @@ function App() {
               <Route path="/Insights" element={<Insights />} />
               <Route path="/Insights/History" element={<History />} />
               <Route path="/Insights/Experience" element={<div>Experience</div>} />
-              <Route path="/Insights/Story" element={<div>Story</div>} />
               <Route path="/Support" element={<Support />} />
               <Route path="/Insights/Learn" element={<Learn />} />
               <Route path="/Insights/Learn/Causes" element={<Causes />} />
@@ -48,6 +48,7 @@ function App() {
               <Route path="/Insights/Learn/FAQ" element={<FAQ />} />
               <Route path="/Support/Service" element={<Service />} />
               <Route path="/Support/Encourage" element={<Encourage />} />
+              <Route path="/Support/Technology" element={<Technology />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/Contact/Community" element={<Community />} />
               <Route path="/Contact/Organization" element={<Organization />} />

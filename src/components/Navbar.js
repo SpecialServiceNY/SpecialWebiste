@@ -1,41 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faMountain, faRoad, faGasPump, faEnvelope, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faMountain, faRoad, faGasPump, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
-import MiniSearch from 'minisearch';
+import MiniSearchComponent from './MiniSearch'; // Adjust the path as per your project structure
+
+// Example data for demonstration
+const data = [
+  { id: 1, title: 'Home', link: '/' },
+  { id: 2, title: 'Insights', link: '/insights' },
+  { id: 3, title: 'Support', link: '/support' },
+  { id: 4, title: 'About', link: '/about' },
+  { id: 5, title: 'Contact', link: '/contact' }
+  // Add more items as needed
+];
 
 const Navbar = () => {
-  const [query, setQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-  const miniSearch = new MiniSearch({ fields: ['title', 'content'] });
-
-  // Example data for demonstration
-  const data = [
-    { id: 1, title: 'Home', link: '/' },
-    { id: 2, title: 'Insights', link: '/insights' },
-    { id: 3, title: 'Support', link: '/support' },
-    { id: 4, title: 'About', link: '/about' },
-    { id: 5, title: 'Contact', link: '/contact' }
-    // Add more items as needed
-  ];
-
-  useEffect(() => {
-    miniSearch.addAll(data);
-  }, [data]);
-
-  const handleSearch = (e) => {
-    const { value } = e.target;
-    setQuery(value);
-
-    const results = miniSearch.search(value);
-    setSearchResults(results);
-  };
-
-  const handleSearchIconClick = () => {
-    const results = miniSearch.search(query);
-    setSearchResults(results);
-  };
-
   return (
     <nav className="navbar">
       <ul className="menu">
@@ -64,7 +43,7 @@ const Navbar = () => {
           <ul className="submenu"> 
             <li><a href="/support/service">Service</a></li>
             <li><a href="/support/encourage">Encourage</a></li>
-            <li><a href="/support/story">Story</a></li>
+            <li><a href="/support/technology">Technology</a></li>
           </ul>
         </li>
         <li className="menu-item">
@@ -89,28 +68,8 @@ const Navbar = () => {
           </ul>
         </li>
       </ul>
-      {/* Search input and results */}
-      <div className="search-container">
-        <input
-          type="text"
-          value={query}
-          onChange={handleSearch}
-          placeholder="Search..."
-          className="search-input"
-        />
-        <FontAwesomeIcon
-          icon={faSearch}
-          className="search-icon"
-          onClick={handleSearchIconClick}
-        />
-        <ul className="search-results">
-          {searchResults.map(result => (
-            <li key={result.id}>
-              <a href={result.link}>{result.title}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Use the MiniSearchComponent here */}
+      <MiniSearchComponent data={data} />
     </nav>
   );
 };

@@ -1,0 +1,51 @@
+.search-container {
+  position: relative;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 添加此行以水平居中 */
+  height: 100%; /* 使用整个高度 */
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.search-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 8px 10px;
+}
+
+.search-results li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
