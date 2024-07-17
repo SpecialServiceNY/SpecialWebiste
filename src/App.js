@@ -39,7 +39,6 @@ function App() {
               <Route path="/About" element={<About />} />
               <Route path="/Insights" element={<Insights />} />
               <Route path="/Insights/History" element={<History />} />
-              <Route path="/Insights/Experience" element={<div>Experience</div>} />
               <Route path="/Support" element={<Support />} />
               <Route path="/Insights/Learn" element={<Learn />} />
               <Route path="/Insights/Learn/Causes" element={<Causes />} />

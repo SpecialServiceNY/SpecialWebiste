@@ -105,3 +105,44 @@
 .toggle-video-button:hover {
   background-color: #0056b3;
 }
+
+.additional-content {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.additional-content .highlighted {
+  color: #d9534f; /* Highlight color */
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.additional-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.additional-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.additional-content ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.additional-content ul li a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.additional-content ul li a:hover {
+  color: #0056b3;
+}

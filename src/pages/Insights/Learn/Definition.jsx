@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHighContrast } from '../../../components/HighContrastContext';
 import './Definition.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,8 +9,6 @@ const Definition = () => {
   const [showVideoAcuity, setShowVideoAcuity] = useState(false);
   const [showVideoPeripheral, setShowVideoPeripheral] = useState(false);
   const [isImageZoomed, setIsImageZoomed] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [dragging, setDragging] = useState(false);
 
   const handleWatchVideoClickAcuity = () => {
     setShowVideoAcuity(!showVideoAcuity);
@@ -22,29 +20,6 @@ const Definition = () => {
 
   const handleImageZoomToggle = () => {
     setIsImageZoomed(!isImageZoomed);
-    setDragging(false); // Reset dragging state when zoom is toggled
-  };
-
-  const handleMouseDown = (e) => {
-    if (isImageZoomed) {
-      setDragging(true);
-      setDragStart({ x: e.clientX, y: e.clientY });
-    }
-  };
-
-  const handleMouseMove = (e) => {
-    if (dragging) {
-      const img = document.querySelector('.chart-image.zoomed');
-      if (img) {
-        img.scrollLeft -= (e.clientX - dragStart.x);
-        img.scrollTop -= (e.clientY - dragStart.y);
-        setDragStart({ x: e.clientX, y: e.clientY });
-      }
-    }
-  };
-
-  const handleMouseUp = () => {
-    setDragging(false);
   };
 
   return (
@@ -62,7 +37,7 @@ const Definition = () => {
         </p>
       </div>
       <div className="content-container">
-        <div className="content-card">
+        <div className="content-card acuity">
           <h2 className="subtitle">Visual Acuity</h2>
           {!showVideoAcuity ? (
             <>
@@ -84,10 +59,6 @@ const Definition = () => {
                   alt="History of the Eye Chart"
                   className={`chart-image ${isImageZoomed ? 'zoomed' : ''}`}
                   onClick={handleImageZoomToggle}
-                  onMouseDown={handleMouseDown}
-                  onMouseMove={handleMouseMove}
-                  onMouseUp={handleMouseUp}
-                  onMouseLeave={handleMouseUp} // Ensure dragging stops when mouse leaves the image
                 />
                 {isImageZoomed && (
                   <div className="zoom-icon" onClick={handleImageZoomToggle}>
@@ -136,7 +107,7 @@ const Definition = () => {
             </button>
           )}
         </div>
-        <div className="content-card">
+        <div className="content-card peripheral">
           <h2 className="subtitle">Peripheral Vision</h2>
           {!showVideoPeripheral ? (
             <>
@@ -189,6 +160,21 @@ const Definition = () => {
             </button>
           )}
         </div>
+      </div>
+      <div className="additional-content">
+        <p className="highlighted">Thank you for exploring the definition of visually impairment.</p>
+        <p>Learn more about the frequently asked questions towards visually impaired individuals:</p>
+        <ul>
+          <li><a href="./FAQ">FAQ</a></li>
+        </ul>
+        <p>Learn more about the causes of visually impairment:</p>
+        <ul>
+          <li><a href="./Causes">Occupation</a></li>
+        </ul>
+        <p>Learn more about the frequently asked questions towards blind people:</p>
+        <ul>
+          <li><a href="./FAQ">FAQ</a></li>
+        </ul>
       </div>
     </div>
   );

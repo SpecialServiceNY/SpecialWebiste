@@ -25,7 +25,8 @@ const History = () => {
     <div className={isHighContrast ? 'high-contrast' : ''}>
     <div>
       <div className="timeline-blurb">
-        <h2>The History of Support for the Visually Impaired in America: From Marginalization to Integration</h2>
+        <h2>The History of Support for the Visually Impaired in America:</h2> 
+        <h2>From Marginalization to Integration</h2>
         <p>
           Discover the transformative journey of the visually impaired in America. From early marginalization to today's comprehensive support and technological advancements, explore how society has progressively recognized and integrated the visually impaired community. Dive into our timeline to see the key milestones and understand the evolution of equal opportunities and support.
         </p>

@@ -32,7 +32,6 @@ const Navbar = () => {
           <ul className="submenu">
             <li><a href="/insights/learn">Learn</a></li>
             <li><a href="/insights/history">History</a></li>
-            <li><a href="/insights/experience">Experience</a></li>
           </ul>
         </li>
         <li className="menu-item">

@@ -112,7 +112,11 @@ const Encourage = () => {
     <div className={`encourage-page ${isHighContrast ? 'high-contrast' : ''}`}>
       <div className="page-header">
         <h1>Encouragement</h1>
+        <div className='page-p'>
         <p>Click on the bubble to break the nonsense.</p>
+        <p>If some bubbles are not displayed correctly, please refresh the page.</p> 
+        <p>Please note that the bubbles will move randomly across the screen</p>
+        </div>
       </div>
       <div className="bubble-container">
         <div className="background-overlay"></div>

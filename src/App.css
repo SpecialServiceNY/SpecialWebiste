@@ -11,3 +11,38 @@
   width: 100%;
   box-sizing: border-box; 
 }
+
+/* Media Queries for Responsive Design */
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 1.2rem; /* Example: Adjusting title font size */
+  }
+  .content {
+    padding: 10px; /* Example: Adjusting content padding */
+  }
+  /* Adjust other elements as needed */
+}
+
+/* For screens between 481px and 768px (e.g., tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .title {
+    font-size: 1.5rem; /* Example: Adjusting title font size */
+  }
+  .content {
+    padding: 15px; /* Example: Adjusting content padding */
+  }
+  /* Adjust other elements as needed */
+}
+
+/* For larger screens (greater than 768px) */
+@media only screen and (min-width: 769px) {
+  .title {
+    font-size: 2rem; /* Example: Adjusting title font size */
+  }
+  .content {
+    padding: 20px; /* Example: Adjusting content padding */
+  }
+  /* Adjust other elements as needed */
+}
