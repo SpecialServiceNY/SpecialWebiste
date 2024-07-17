@@ -4,20 +4,24 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import './MiniSearch.css';
 import MiniSearch from 'minisearch';
 import keywordLists from '../config/keywordLists';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
 const MiniSearchComponent = ({ data }) => {
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const miniSearch = new MiniSearch({ fields: ['title', 'link'] });
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
     miniSearch.addAll(data);
   }, [data]);
 
   const handleSearch = () => {
+    console.log("Search triggered"); // 检查是否触发
     const trimmedQuery = query.trim();
     if (trimmedQuery.length > 0) {
       const results = miniSearch.search(trimmedQuery);
+      console.log("Search results:", results); // 检查搜索结果
       setSearchResults(results);
     } else {
       setSearchResults([]);
@@ -32,10 +36,16 @@ const MiniSearchComponent = ({ data }) => {
   const getPageFromKeyword = (keyword) => {
     for (let page in keywordLists) {
       if (keywordLists[page].includes(keyword)) {
-        return `/${page}`; // 返回页面路径
+        return `/${page.toLowerCase()}`; 
       }
     }
-    return '/'; // 如果未找到，默认返回首页
+    return '/'; 
+  };
+
+  const handleResultClick = (title) => {
+    const keyword = title.toLowerCase();
+    const path = getPageFromKeyword(keyword);
+    navigate(path); // Use navigate to navigate to the correct page
   };
 
   return (
@@ -66,7 +76,12 @@ const MiniSearchComponent = ({ data }) => {
           <ul>
             {searchResults.map((result, index) => (
               <li key={index}>
-                <a href={getPageFromKeyword(result.title.toLowerCase())}>{result.title}</a>
+                <button
+                  onClick={() => handleResultClick(result.title)}
+                  className="result-button"
+                >
+                  {result.title}
+                </button>
               </li>
             ))}
           </ul>

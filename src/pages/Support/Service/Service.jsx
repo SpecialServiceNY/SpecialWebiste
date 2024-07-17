@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useHighContrast } from '../../../components/HighContrastContext';
-import SearchResultsContainer from './SearchResults';
 import './Service.css';
 
 const Service = () => {
@@ -48,21 +47,281 @@ const Service = () => {
   };
 
   const handleGoButtonClick = () => {
+    let results = [];
+  
     // Simulating search results based on selected criteria
     if (selectedLocation === 1 && selectedAgeRange === 3 && selectedServiceType === 4) {
-      const results = [
+      results.push(
         {
           id: 1,
           text: 'Business Enterprise Program (BEP)',
           description: 'The New York State Commission for the Blind (NYSCB)’s Business Enterprise Program (BEP) provides a rigorous BEP vendor training program that teaches NYSCB participants to successfully manage a deli, vending operation, newsstand, snack bar or cafeteria. Participants learn business math, labor and merchandise management, purchasing, legal requirements and customer service.',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJb8McuHIzgG6vQlk2swLzHbs0Owv2EqM3gA&s',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_CZTiJEnIQ26czs5lrqlMcbclfi-hFpmjw&s',
           website: 'https://ocfs.ny.gov/programs/nyscb/programs/enterprise.php'
+        },
+        {
+          id: 2,
+          text: 'Vocational Rehabilitation Program',
+          description: 'The Vocational Rehabilitation (VR) Program offers guidance and counseling to assist consumers who are legally blind find or retain employment. Vocational counselors work with the consumer to develop an Individualized Plan for Employment (IPE). The IPE acts as a road map to guide the consumer toward their employment goals.',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_CZTiJEnIQ26czs5lrqlMcbclfi-hFpmjw&s',
+          website: 'https://ocfs.ny.gov/programs/nyscb/programs/vocational-rehab.php'
+        },
+        {
+          id: 3,
+          text: 'Youth Employment Program',
+          description: 'From building a resume to learning vital interview skills, our team works closely with visually impaired students to help them become employable and compete for paying jobs in the community. Students gain independence and real-world work experience, and an awareness of their positive contributions to the community.',
+          imageUrl: 'https://lighthouseguild.org//wp-content/uploads/2021/06/youth_academic_svs.jpg',
+          website: 'https://lighthouseguild.org/support-services/academic-and-career-services/youth-employment-program/'
         }
-      ];
-      setSearchResults(results);
-    } else {
-      setSearchResults([]);
+      );
     }
+  
+    if (selectedLocation === 5 && selectedAgeRange === 3 && selectedServiceType === 4) {
+      results.push(
+        {
+        id: 4,
+        text: 'Foundations Program',
+        description: 'Participants in HKSB’s Foundations Program — a comprehensive work-readiness program that addresses the holistic needs of potential job seekers — excel in their next steps in obtaining employment.',
+        imageUrl: 'https://media.licdn.com/dms/image/C5616AQHf0AQggW2W9g/profile-displaybackgroundimage-shrink_200_800/0/1643647721476?e=2147483647&v=beta&t=DVpJnDiYc2WWFmyJfWLTPgzkzOJ1Eog9JKkqUwWPJqs',
+        website: 'https://www.helenkeller.org/hksb/career-development/'
+      },
+      {
+        id: 5,
+        text: 'Work Experience Training',
+        description: 'During your time at HKSB, you will have the opportunity to work in real-world settings, building marketable skills and enhancing your resume through internship opportunities.',
+        imageUrl: 'https://media.licdn.com/dms/image/C5616AQHf0AQggW2W9g/profile-displaybackgroundimage-shrink_200_800/0/1643647721476?e=2147483647&v=beta&t=DVpJnDiYc2WWFmyJfWLTPgzkzOJ1Eog9JKkqUwWPJqs',
+        website: 'https://www.helenkeller.org/hksb/career-development/'
+      },
+    );
+    }
+
+    if (selectedLocation === 1 && selectedAgeRange === 5 && selectedServiceType === 2) {
+      results.push(
+        {
+        id: 6,
+        text: 'Optometry & Eye Exams',
+        description: 'Our vision specialists will determine the level of your vision loss. We may even recommend tools you can use to improve your ability to read, work, socialize, and enjoy other activities.',
+        imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/5774/eye_exam2-1200x675-c.jpg',
+        website: 'https://lighthouseguild.org/healthcare-services/optometry-eye-exams/'
+      },
+      {
+        id: 7,
+        text: 'Behavioral Health Services',
+        description: 'Lighthouse Guild’s Dorothy Strelsin Behavioral Health Clinic is the only behavioral health center in the United States focused on people who are blind, visually impaired, or at risk for vision loss. We also offer services to families and caretakers as they manage issues related to living with and caring for an individual with a vision impairment or at risk of vision loss.',
+        imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/5731/therapy-1200x675-c.jpg',
+        website: 'https://lighthouseguild.org/healthcare-services/behavioral-health-services/'
+      },
+      {
+        id: 8,
+        text: 'Diabetes Care & Endocrinology',
+        description: 'A common yet serious complication of diabetes is vision loss or blindness. At Lighthouse Guild’s Maxine and John M. Bendheim Center for Diabetes Care, we help you stay healthy and preserve your eyesight.',
+        imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/5797/diabetes_test-1200x675-c.jpg',
+        website: 'https://lighthouseguild.org/healthcare-services/diabetes-care-and-endocrinology/'
+      },
+      {
+        id: 9,
+        text: 'Podiatry',
+        description: 'Vision loss makes it difficult to take care of your feet or observe signs of trouble. For people with diabetes, you’re at risk for both visual impairment and foot issues — making it double the difficulty.',
+        imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/5721/doctor-and-patient-960x540-c.jpg',
+        website: 'https://lighthouseguild.org/healthcare-services/diabetes-care-and-endocrinology/'
+      },
+      {
+        id: 10,
+        text: 'Occupational Therapy',
+        description: 'At Lighthouse Guild, our rehabilitation services can help restore your function and quality of life. Our multidisciplinary team offers occupational therapy for people with physical and functional disabilities and is available to everyone regardless of whether they experience vision loss.',
+        imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/6826/argus_patient_ot_landing-1200x675-c.jpg',
+        website: 'https://lighthouseguild.org/healthcare-services/occupational-therapy/'
+      },
+      {
+        id: 11,
+        text: 'Primary Care Services',
+        description: 'At Lighthouse Guild, our primary care physicians understand how visual impairment and blindness impact health, and work with you to develop a coordinated plan of care. We also connect you to specialists and programs, based on your needs, and teach you how to advocate for your health.',
+        imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/2789/iStock-1089976414_blood_pressure-1200x675-c.jpg',
+        website: 'https://lighthouseguild.org/healthcare-services/primary-care-services/'
+      },
+      {
+        id: 12,
+        text: 'Adult Day Health Care',
+        description: 'If you or your loved one need daily medical services and crave social interaction, then our Adult Day Health Care (ADHC) program is for you. At GuildCare — the only ADHC program in New York State that specializes in people with vision loss — our healthcare services can be used daily or a few days a week, depending on your needs.',
+        imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/5747/tai-chi-1200x675-c.jpg',
+        website: 'https://lighthouseguild.org/healthcare-services/adult-day-health-care/'
+      },
+    );
+    }
+
+    if (selectedLocation === 6 && selectedAgeRange === 5 && selectedServiceType === 3) {
+      results.push(
+        {
+        id: 13,
+        text: 'Adult Day Health Care',
+        description: 'If you or your loved one need daily medical services and crave social interaction, then our Adult Day Health Care (ADHC) program is for you. At GuildCare — the only ADHC program in New York State that specializes in people with vision loss — our healthcare services can be used daily or a few days a week, depending on your needs.',
+        imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/5747/tai-chi-1200x675-c.jpg',
+        website: 'https://lighthouseguild.org/healthcare-services/adult-day-health-care/'
+      },
+      {
+        id: 14,
+        text: 'Individual Social Work Services',
+        description: 'VISIONS social workers can also assist by providing benefits counseling and resources, in applying directly for benefits and services, and by providing advocacy and assistance in addressing related problems. LGBTQ+ people are welcome.',
+        imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+        website: 'https://visionsvcb.org/social-work-services/'
+      },
+      {
+        id: 15,
+        text: 'Moving Forward',
+        description: 'A support group for visually impaired adults of all ages. A safe, confidential place to discuss frustrations, concerns, and daily living as it relates to vision loss. In this group, members can provide each other with encouragement, comfort, advice and even share personal experiences.',
+        imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+        website: 'https://visionsvcb.org/social-work-services/'
+      },
+      {
+        id: 16,
+        text: 'Between Us Men',
+        description: 'Peer led support group for adult men only. A safe confidential space where members can share anything on their minds. Conversations can include but are not limited to the following topics: family relationships, stressors, hobbies, dating, parenting and more.',
+        imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+        website: 'https://visionsvcb.org/social-work-services/'
+      },
+      {
+        id: 17,
+        text: 'Women’s Empowerment',
+        description: 'Supportive space and group where women can share life’s ups and downs and everything in between. This is a safe confidential space where women can explore various roles they have and how that plays out in life. The group is virtual and meets on Thursday from 4:00pm to 5:00pm.',
+        imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+        website: 'https://visionsvcb.org/social-work-services/'
+      },
+    );
+    }
+
+    if ((selectedLocation === 1 || selectedLocation === 2 || selectedLocation === 5) && selectedAgeRange === 5 && selectedServiceType === 3) {
+      results.push(
+        {
+          id: 18,
+          text: 'Social Casework Services',
+          description: 'Adjusting to blindness or vision loss can be difficult. At Helen Keller Services for the Blind, you’ll be assigned a social worker who will help you to deal with both emotional and practical issues.',
+          imageUrl: 'https://www.helenkeller.org/wp-content/uploads/2022/06/Man-with-hand-raised-in-circle-of-people.jpg',
+          website: 'https://www.helenkeller.org/hksb/social-casework-services/'
+        },
+      );
+    }
+    if (selectedLocation === 6 && selectedAgeRange === 2 && selectedServiceType === 3) {
+      results.push(
+        {
+          id: 20,
+          text: 'Pre-Vocational Enrichment Program Socialization Skill Building Group',
+          description: 'The goals of this discussion group is to collaboratively engage in ways to manage the general stress and anxiety related to adjustment to vision loss, and transitioning into the workplace. These will include enhancing socialization skills, honing one’s skills, boosting awareness and confidence.',
+          imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+          website: 'https://visionsvcb.org/social-work-services/'
+        },
+      );
+    }
+    if (selectedLocation === 6 && (selectedAgeRange === 2 || selectedAgeRange === 3|| selectedAgeRange === 4) && selectedServiceType === 3) {
+      results.push(
+        {
+          id: 21,
+          text: 'Managing Vocational Stress: Virtual Social Work Support Group',
+          description: 'Managing Vocational Stress is a ten-session psychoeducational group offered to adult participants (18 years or older) in the VISIONS workforce department. The group meets virtually once a week on Zoom.',
+          imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+          website: 'https://visionsvcb.org/social-work-services/'
+        },
+      );
+    }
+    if (selectedLocation === 6 && selectedAgeRange === 4 && selectedServiceType === 3) {
+      results.push(
+        {
+          id: 22,
+          text: 'Unpaid Caregiver Support Group',
+          description: 'Unpaid Caregivers (family, friends, neighbors) caring for someone age 60 or older where one or both people are blind or partially sighted meet as a group with a counselor to discuss the impact of being an unpaid caregiver.',
+          imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+          website: 'https://visionsvcb.org/social-work-services/'
+        },
+      );
+    }
+    if (selectedLocation === 6 && (selectedAgeRange === 3|| selectedAgeRange === 4) && selectedServiceType === 3) {
+      results.push(
+        {
+          id: 23,
+          text: 'Parenting Journey',
+          description: 'This is a special group for parents of children with disabilities. Small groups of parents and caregivers meet for 2 hours a week for 12 weeks. The program includes activities, discussions, in-person family-style meals, and complimentary in-person childcare.',
+          imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+          website: 'https://visionsvcb.org/social-work-services/'
+        },
+      );
+    }
+    if ((selectedLocation === 1 || selectedLocation === 2 || selectedLocation === 3 || selectedLocation === 4 || selectedLocation === 5 || selectedLocation === 6) && selectedAgeRange === 2 && selectedServiceType === 4) {
+      results.push(
+        {
+          id: 24,
+          text: 'Vocational Rehabilitation Services for Transition Age Youth',
+          description: 'NYSCB provides pre-employment transition services to students ages 14 to 22, transition services to youth and vocational rehabilitation services for all students who are legally blind, including those with additional disabilities.',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_CZTiJEnIQ26czs5lrqlMcbclfi-hFpmjw&s',
+          website: 'https://ocfs.ny.gov/programs/nyscb/programs/transition.php'
+        },
+      );
+    }
+    if ((selectedLocation === 1 || selectedLocation === 2 || selectedLocation === 3 || selectedLocation === 4 || selectedLocation === 5 || selectedLocation === 6) && selectedAgeRange === 4 && (selectedServiceType === 1 || selectedServiceType === 3 || selectedServiceType === 5)) {
+      results.push(
+        {
+          id: 25,
+          text: 'Adaptive Living Program',
+          description: 'The Adaptive Living Program (ALP), is for people who need training and services to assist them in living at home and in the community. In most cases, the consumer has to be over the age of 55, unless they have circumstances where they do not want to pursue employment. The ALP program provides Adjustment Counseling, Rehab Teaching, and Orientation & Mobility.',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_CZTiJEnIQ26czs5lrqlMcbclfi-hFpmjw&s',
+          website: 'https://ocfs.ny.gov/programs/nyscb/programs/independent-living.php'
+        },
+      );
+    }
+    if ((selectedLocation === 1 || selectedLocation === 2 || selectedLocation === 3 || selectedLocation === 4 || selectedLocation === 5) && (selectedAgeRange === 2 ||selectedAgeRange === 3) && selectedServiceType === 4) {
+      results.push(
+        {
+          id: 26,
+          text: 'Employment Program',
+          description: 'The Employment Program at Bronx Independent Living Services (BILS) is aimed to assist all individuals with disabilities in their journey to finding work. We offer a variety of employment and vocational services to help our consumers prepare for, locate, and maintain suitable employment. BILS works with ACCES-VR as well as Ticket to Work program to provide an array of services both remotely and in person.',
+          imageUrl: 'https://bils.org/wp-content/uploads/2024/05/coworkers-looking-at-a-laptop-in-an-office-8127690-1024x683.jpg',
+          website: 'https://bils.org/programs/employment-program/'
+        },
+      );
+    }
+    if (selectedLocation === 3 && selectedAgeRange === 5 && selectedServiceType === 3) {
+      results.push(
+        {
+          id: 27,
+          text: 'Open Doors Program',
+          description: 'Open Doors Program assists individuals living in a nursing home or Intermediate Care Facility (ICF) in making decisions regarding home and community-based services. BILS has Transition Specialists who directly assist people in nursing homes to access the services they need to return to the community.',
+          imageUrl: 'https://bils.org/wp-content/uploads/2024/05/electric-wheelchair-joystick-controller-19882116-1024x681.jpg',
+          website: 'https://bils.org/programs/open-doors-mfp/'
+        },
+      );
+    }
+    if (selectedLocation === 3 && selectedAgeRange === 2 && selectedServiceType === 1) {
+      results.push(
+        {
+          id: 28,
+          text: 'Youth Services',
+          description: 'Bronx Independent Living Services’ Youth Services are available to youth with disabilities ages 14-24, parents and families, and those in the community working with youth. They provide young people with the skills, encouragement, and support they need to be successful in society and accomplish their academic and employment goals.',
+          imageUrl: 'https://bils.org/wp-content/uploads/2023/05/bils-youth-services-program.jpg',
+          website: 'https://bils.org/programs/youth-services/'
+        },
+      );
+    }
+    if (selectedLocation === 3 && selectedAgeRange === 3 && (selectedServiceType === 3 ||selectedServiceType === 4)) {
+      results.push(
+        {
+          id: 29,
+          text: 'Peer Integration Services (ACCES-PIP)',
+          description: 'The Peer Integration Project (PIP) works in partnership with ACCES-VR (Adult Career & Continuing Education Services – Vocational Rehabilitation) to provide supportive services that address obstacles/challenges that may be hindering your ability to reach employment goals. BILS work with a wide variety of community partners with the goal of connecting people with disabilities with the information and resources they need.',
+          imageUrl: 'https://bils.org/wp-content/uploads/2023/06/bils-peer-integration-services.jpg',
+          website: 'https://bils.org/programs/peer-integration-services-acess-pip/'
+        },
+      );
+    }
+    if (selectedLocation === 3 && selectedAgeRange === 5 && selectedServiceType === 3) {
+      results.push(
+        {
+          id: 30,
+          text: 'Disability Awareness Program',
+          description: 'BILS offers a series of disability awareness programs tailored for corporations, service providers, government agencies, and other organizations that work with or provide services to people with disabilities. The program includes real life vignettes, group exercises, and questions and answers to help participants examine and recognize their attitudes about people with disabilities in a safe, supportive environment.',
+          imageUrl: 'https://bils.org/wp-content/uploads/2023/08/bils-disability-awareness-program.jpg',
+          website: 'https://bils.org/programs/disability-awareness-program/'
+        },
+      );
+    }
+    setSearchResults(results);
   };
 
   return (

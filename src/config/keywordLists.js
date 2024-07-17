@@ -9,7 +9,6 @@ const keywordLists = {
   Support: ['technology'],
   About: ['about', 'me', 'project'],
   Contact: ['contact', 'organization', 'community', 'volunteer']
-  // 添加更多页面的关键词列表
 };
 
 export default keywordLists;

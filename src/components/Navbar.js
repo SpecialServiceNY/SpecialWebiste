@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faMountain, faRoad, faGasPump, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
-import MiniSearchComponent from './MiniSearch'; // Adjust the path as per your project structure
+
 
 // Example data for demonstration
 const data = [
@@ -68,8 +68,6 @@ const Navbar = () => {
           </ul>
         </li>
       </ul>
-      {/* Use the MiniSearchComponent here */}
-      <MiniSearchComponent data={data} />
     </nav>
   );
 };

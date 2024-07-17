@@ -7,7 +7,7 @@
 
 .image-container {
   position: relative;
-  width: 80%;
+  width: 90%;
   margin-bottom: 20px;
 }
 
@@ -19,20 +19,21 @@
 
 .hotspot {
   position: absolute;
+  height:fit-content;
+  width:150px;
   background: rgba(0, 123, 255, 0.8);
   color: white;
   padding: 10px;
   cursor: pointer;
   border: 2px solid #007bff;
   border-radius: 10px;
-  transform: translate(-50%, -50%);
   font-size: 1.2rem;
   font-weight: bold;
   transition: background 0.3s, transform 0.3s;
 }
 
 .hotspot:hover {
-  background: rgba(0, 123, 255, 1);
+  background: rgb(224, 113, 33);
   transform: scale(1.1);
 }
 

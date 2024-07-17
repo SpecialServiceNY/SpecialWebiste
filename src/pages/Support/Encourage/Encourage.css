@@ -28,7 +28,6 @@
   background-position: center;
   border-radius: 20px; /* Optional: Add rounded corners */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Add shadow */
-  overflow: hidden; /* Hide overflow content */
 }
 
 .background-overlay {

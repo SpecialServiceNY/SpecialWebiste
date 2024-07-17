@@ -6,8 +6,8 @@ const Encourage = () => {
   const { isHighContrast } = useHighContrast();
 
   const generateRandomPosition = (isPopped) => {
-    const maxWidth = isPopped ? 70 : 100;
-    const maxHeight = isPopped ? 70 : 100;
+    const maxWidth = isPopped ? 75 : 100;
+    const maxHeight = isPopped ? 75 : 75;
     return {
       top: `${Math.random() * maxHeight}%`,
       left: `${Math.random() * maxWidth}%`,

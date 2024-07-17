@@ -84,36 +84,61 @@
 .search-results {
   width: 100%;
   margin-top: 20px;
-  display: flex;
-  flex-direction: row; 
-  justify-content: center; 
-  align-items: flex-start; 
-  position: absolute; 
-  bottom: 0; 
-  margin-bottom:60px;
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
 
-
-.result img {
-  width: 33.33%; /* 图片占据卡片的三分之一宽度 */
-  display: flex;
-  flex-wrap: wrap;
-  height: auto;
+.result-card {
+  display:flex;
+  height: 200px; /* 设定固定高度 */
+  padding: 15px;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #e6f7db;
+  transition: transform 0.3s;
+}
+
+.result-card:hover {
+  transform: scale(1.02);
+}
+
+.result-card:not(:last-child) {
+  margin-bottom: 10px; /* 最后一个卡片不需要间距 */
+}
+
+.result-image {
+  flex: 1;
+}
+
+.result-image img {
+  width: auto;
+  height: 180px; /* 图片占据整个.result-image的高度 */
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .result-details {
-  width: 66.67%; /* 右侧内容占据卡片的三分之二宽度 */
-  padding-left: 10px; /* 左侧边距增加 */
+  flex: 2;
+  padding-left: 15px;
 }
 
-.result h3 {
-  margin-top: 10px;
-  text-align: left; /* 文字左对齐 */
+.result-details h3 {
+  margin-top: 0;
 }
 
-.result p {
+.result-details p {
   margin-top: 5px;
-  text-align: left; /* 文字左对齐 */
+  font-size: 14px;
+}
+
+.result-details a {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result-details a:hover {
+  text-decoration: underline;
 }
