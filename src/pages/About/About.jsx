@@ -16,7 +16,7 @@ const About = () => {
   };
 
   const openTheProject = () => {
-    openInNewTab('https://medium.com/@tianhe1019/a-digital-initiative-for-the-visually-impaired-in-new-york-3d405de5a4e5');
+    openInNewTab('https://medium.com/@qc_96385/road-to-the-independence-a-summary-81a7fa21e27b');
   };
 
   return (

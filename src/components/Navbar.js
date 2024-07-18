@@ -52,7 +52,7 @@ const Navbar = () => {
           </a>
           <ul className="submenu">
             <li><a href="https://xanderxuan.wordpress.com" target="_blank" rel="noopener noreferrer">About Me</a></li>
-            <li><a href="https://medium.com/@tianhe1019/a-digital-initiative-for-the-visually-impaired-in-new-york-3d405de5a4e5" target="_blank" rel="noopener noreferrer">The Project</a></li>
+            <li><a href="https://medium.com/@qc_96385/road-to-the-independence-a-summary-81a7fa21e27b" target="_blank" rel="noopener noreferrer">The Project</a></li>
           </ul>
         </li>
         <li className="menu-item">
