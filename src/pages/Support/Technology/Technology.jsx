@@ -16,7 +16,8 @@ const technologies = [
     title: 'Accessible Washer And Dryer',
     description: 'The controls of washers and dryers differ from brand to brand. Some have an easy-to-feel point on the control dial. The dial clicks as you move from cycle to cycle, making it easy and predictable to set.',
     image: 'https://images.squarespace-cdn.com/content/v1/5a36eb7bd74cffbd7ebfde35/414a5146-3a8b-49a9-bd74-f8a2f472df1f/Washer-Dryer+Clear+Spaces+Overlapping.png',
-    video: 'https://www.youtube.com/embed/9odfPWiJWOA?si=V720AEO16zBARfNq'
+    video: 'https://www.youtube.com/embed/9odfPWiJWOA?si=V720AEO16zBARfNq',
+    source: 'Credit to: The Blind Life'
   },
   {
     id: 3,
@@ -30,9 +31,9 @@ const technologies = [
     id: 4,
     title: 'JAWS',
     description: 'JAWS, Job Access With Speech, is the world’s most popular screen reader, developed for computer users whose vision loss prevents them from seeing screen content or navigating with a mouse.',
-    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdt7x8lEVoyfWeGPedFj4VuraNfGRXGWreu8h15eZDbLO5nPdWo_F3vI86vtA_Dv62Sw02OXwxnKkgG9azJkVcm4yxBwaSfbsFhIEZt_WHWQa2UkyYI4_SL_NR0Chq9d0CKgKhmqTMmE4/w1200-h630-p-k-no-nu/JAWS-illustration2.png',
-    audio: `${process.env.PUBLIC_URL}/Jaws.MP3`,
-    source: 'Listen to Khadija Bari'
+    image: 'https://emeraldcoastvisionaids.com/wp-content/uploads/JAWS-1-300x300.jpg',
+    video: 'https://www.youtube.com/embed/dlcY7QIsP0c?si=Hi0yu6aeKKOnH9sg',
+    source: 'Credit to: Sight & Sound Technology Limited'
   },
   {
     id: 5,
@@ -55,12 +56,13 @@ const technologies = [
     title: 'Fusion',
     description: 'Fusion is the ultimate accessibility tool for schools, agencies, training centers, and businesses where individuals with vision loss are served.',
     image: 'https://sterlingadaptives.com/cdn/shop/products/FusionPro_603e31f7-a617-4bd0-abb2-1405b2258123.jpg?v=1631660969',
-    video: 'https://www.youtube.com/embed/Yt9LPUZNNa8?si=4T9PKvEAz_Pm30Ok'
+    video: 'https://www.youtube.com/embed/Yt9LPUZNNa8?si=4T9PKvEAz_Pm30Ok',
+    source:'Credit to: aisquared'
   },
   {
     id: 8,
     title: 'Movie Audio description',
-    description: 'Audio description is a form of narration used to provide information surrounding key visual elements in a media work for the benefit of blind and visually impaired consumers. These narrations are typically placed during natural pauses in the audio, and sometimes overlap dialogue if deemed necessary.',
+    description: 'Audio description is a form of narration used to provide information surrounding key visual elements in a media work for the benefit of blind and visually impaired consumers.',
     image: 'https://captaincaptions.com/wp-content/uploads/2019/09/ad.png?w=1095',
     audio: `${process.env.PUBLIC_URL}/Movie Audio description.MP3`,
     source: 'Listen to Khadija Bari'
@@ -70,7 +72,30 @@ const technologies = [
     title: 'OKO',
     description: 'The OKO app is an invaluable addition to the toolkit of pedestrians on the blindness spectrum, striving to ensure safe and efficient crossings.',
     image: 'https://innovationorigins.com/app/uploads/2022/04/IMG_7484-scaled.jpeg',
-    video: 'https://www.youtube.com/embed/BObcEPu_q8c?si=Udh49pWl1jej1uVD'
+    video: 'https://www.youtube.com/embed/BObcEPu_q8c?si=Udh49pWl1jej1uVD',
+    source: 'Credit to: The Blind Life'
+  },
+  {
+    id: 10,
+    title: 'Braille Printers',
+    description: 'Braille printers receive data from computer devices and emboss that information in braille onto paper through the use of solenoids that control embossing pins.',
+    image: 'https://cidi.gatech.edu/sites/default/files/2020-02/embosser.jpg',
+    video: 'https://www.youtube.com/embed/nKNDyni9pXk?si=ZYmofB_l43cssi_5',
+    source: 'Credit to: Irie AT Inc.'
+  },
+  {
+    id: 11,
+    title: 'Bookshare',
+    description: 'Bookshare audiobooks and ebooks make reading easy. You can customize your reading experience with assistive reading features that remove reading barriers.',
+    image: 'https://supportforfamilies.org/wp-content/uploads/2022/12/OSEP_Parent_Graphic-1024x640.png',
+    video: 'https://www.youtube.com/embed/w4M7P0qomIo?si=rCYNiCaJcURkcYYa',
+  },
+  {
+    id: 12,
+    title: 'Kapten PLUS GPS',
+    description: 'The Kapten can plot routes to local businesses or a specific address, and provide accurate location information. The Kapten Plus is also an MP3 player, an FM radio, and an audio memo recorder.',
+    image: 'https://www.afb.org/serve/media/aw120707f1',
+    video: 'https://www.youtube.com/embed/EfvA1r5yDLc?si=mByBJ-EY8XektEbo',
   },
 ];
 

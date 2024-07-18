@@ -321,6 +321,116 @@ const Service = () => {
         },
       );
     }
+    if (selectedLocation === 6 && selectedAgeRange === 5 && selectedServiceType === 5) {
+      results.push(
+        {
+          id: 31,
+          text: 'Assistive Technology Training Resources (individuals and centers)',
+          description: 'New York State Commission for the Blind will connect you with the assistive technology training resources in several regions of New York State.',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_CZTiJEnIQ26czs5lrqlMcbclfi-hFpmjw&s',
+          website: 'https://ocfs.ny.gov/programs/nyscb/training/'
+        },
+      );
+    }
+    if (selectedLocation === 1 && selectedAgeRange === 5 && selectedServiceType === 5) {
+      results.push(
+        {
+          id: 32,
+          text: 'Lighthouse Guild Technology Center',
+          description: 'Lighthouse Guild’s Technology Center is the largest and foremost premier assistive technology resource in the U.S. The Center is a hub connecting innovators and users to advance technological development for our community and beyond.',
+          imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/12233/tech_center_header-1200x675-c.jpg',
+          website: 'https://lighthouseguild.org/technology/technology-center/'
+        },
+      );
+    }
+    if (selectedLocation === 6 && selectedAgeRange === 5 && selectedServiceType === 5) {
+      results.push(
+        {
+          id: 33,
+          text: 'AT Training at VRC',
+          description: 'In 2018, VISIONS was awarded the New York State contract to be the Assistive Technology Center (ATC) providing assistive technology and computer training serving students and adults who are legally blind in area 5.',
+          imageUrl: 'https://visionsvcb.org/wp-content/uploads/2018/06/30.jpg',
+          website: 'https://visionsvcb.org/technology/at-training-at-vrc/'
+        },
+      );
+    }
+    if (selectedLocation === 6 && selectedAgeRange === 5 && selectedServiceType === 5) {
+      results.push(
+        {
+          id: 34,
+          text: 'VISIONS Assistive Technology Services',
+          description: 'Since 2001, VISIONS has offered assistive technology services for legally blind and severely visually impaired consumers at VISIONS at Selis Manor.  This is an accessible and adapted learning environment and meeting place for blind youth, adults and older persons.',
+          imageUrl: 'https://visionsvcb.org/wp-content/uploads/2022/11/VISIONS-Color-Logo-Full-scaled.jpg',
+          website: 'https://visionsvcb.org/technology/at-training-at-selis/'
+        },
+      );
+    }
+    if (selectedLocation === 6 && selectedAgeRange === 5 && selectedServiceType === 5) {
+      results.push(
+        {
+          id: 35,
+          text: 'HKSB Vocational Rehabilitation Services Assistive Technology Training',
+          description: 'Assistive technology can be a real game changer for people with vision loss, increasing access to information and providing tools to minimize obstacles in workplace and educational settings.',
+          imageUrl: 'https://www.helenkeller.org/wp-content/uploads/2022/06/Woman-using-assistive-technology-on-computer.jpg',
+          website: 'https://www.helenkeller.org/hksb/assistive-technology-for-the-blind/'
+        },
+      );
+    }
+    if (selectedLocation === 2 && selectedAgeRange === 5 && selectedServiceType === 5) {
+      results.push(
+        {
+          id: 36,
+          text: 'Computer Sciences for the Blind and Visually Impaired - SCREEN READER TRAINING',
+          description: 'Upon losing vision one need not also lose access to their computer, their phone, the Internet and the possibility of employment. CSB CARE devotes significant resources to train clients in fully accessing their computers through the use of today’s popular screen readers, such as Jaws, ZoomText and NVDA.',
+          imageUrl: 'https://www.computersciences.org/wp-content/uploads/2021/06/conference-pic-slide-scaled.jpg',
+          website: 'https://www.computersciences.org/services/'
+        },
+      );
+    }
+    if ((selectedLocation === 1||selectedLocation === 6) && selectedAgeRange === 4 && selectedServiceType === 5) {
+      results.push(
+        {
+          id: 37,
+          text: 'Tech Pals',
+          description: 'Lighthouse Guild’s Technology Peers for Accessible Living program is funded with a grant from the Reader’s Digest Partners for Sight Foundation. The program matches young adults (aged 18-24) who are blind or visually impaired to serve as technology mentors to older adults aged 55+ who are also dealing with vision loss.',
+          imageUrl: 'https://lighthouseguild.org//wp-content/uploads/fly-images/13201/jqgdWnRg-scaled-1200x675-c.jpeg',
+          website: 'https://lighthouseguild.org/technology/technology-center/tech-pals/'
+        },
+      );
+    }
+    if (selectedLocation === 2 && (selectedAgeRange === 1||selectedAgeRange === 2) && selectedServiceType === 1) {
+      results.push(
+        {
+          id: 38,
+          text: 'JCC Brooklyn Camp for Blind Youth',
+          description: 'JCC Brooklyn Camp for Blind Youth is the first-of-its-kind day camp in Brooklyn designed specifically for children who are blind or have Low vision ages 4 through 17.',
+          imageUrl: 'https://www.jcc-brooklyn.org/camp/wp-content/uploads/sites/3/2017/09/DSC_7393-web.jpg',
+          website: 'https://www.jcc-brooklyn.org/camp/camp-for-children-who-are-blind-or-have-low-vision/'
+        },
+      );
+    }
+    if (selectedLocation === 6 && selectedAgeRange === 5 && (selectedServiceType === 1||selectedServiceType === 3)) {
+      results.push(
+        {
+          id: 39,
+          text: 'The Audio Description Project',
+          description: 'The American Council of the Blind (ACB) and its Audio Description Project (ADP) aim to bring more meaning and enjoyment to entertainment, cultural, and educational experiences for blind and visually impaired people. The key is Audio Description.',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTETYvQ-dq1cbGjWf5lBlMbR0PXPu-bumwLog&s',
+          website: 'https://adp.acb.org/'
+        },
+      );
+    }
+    if (selectedLocation === 1 && selectedAgeRange === 5 && selectedServiceType === 2) {
+      results.push(
+        {
+          id: 40,
+          text: 'New York Eye and Ear Infirmary of Mount Sinai Eye Services',
+          description: 'New York Eye and Ear Infirmary of Mount Sinai (NYEE) offers patients the most advanced and comprehensive treatments for all eye conditions.',
+          imageUrl: 'https://www.nyee.edu/files/NYEE/Patient-Care/Eye%20Services/MSHS-NYEE-EyeServices-2col-770x420-v2.jpg',
+          website: 'https://www.nyee.edu/care/eye'
+        },
+      );
+    }
     setSearchResults(results);
   };
 

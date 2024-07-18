@@ -3,13 +3,35 @@
   flex-direction: column;
   min-height: 100vh;
 }
-  
+
 .content {
   flex: 1;
   padding: 20px;
   background-color: #f0f0f0;
   width: 100%;
   box-sizing: border-box; 
+}
+
+/* Universal Selector for Box-Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Responsive Images and Media */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Media Queries for Responsive Design */
@@ -23,6 +45,10 @@
     padding: 10px; /* Example: Adjusting content padding */
   }
   /* Adjust other elements as needed */
+  .container {
+    flex-direction: column;
+    gap: 10px; /* Adjust gap between elements */
+  }
 }
 
 /* For screens between 481px and 768px (e.g., tablets) */
@@ -34,6 +60,11 @@
     padding: 15px; /* Example: Adjusting content padding */
   }
   /* Adjust other elements as needed */
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust gap between elements */
+  }
 }
 
 /* For larger screens (greater than 768px) */
@@ -45,4 +76,47 @@
     padding: 20px; /* Example: Adjusting content padding */
   }
   /* Adjust other elements as needed */
+  .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px; /* Adjust gap between elements */
+  }
+}
+
+/* Additional Responsive Styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav-item {
+  padding: 10px;
+  flex: 1 1 auto;
+  text-align: center;
 }

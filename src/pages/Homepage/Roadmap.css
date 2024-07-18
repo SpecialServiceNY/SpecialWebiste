@@ -19,8 +19,8 @@
 
 .hotspot {
   position: absolute;
-  height:fit-content;
-  width:150px;
+  height: fit-content;
+  width: 150px;
   background: rgba(0, 123, 255, 0.8);
   color: white;
   padding: 10px;
@@ -40,10 +40,38 @@
 .ppt-container {
   width: 60%;
   margin-top: 20px;
+  position: relative;
 }
 
 .ppt-content {
   animation: fadeIn 0.5s ease-in-out;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 3rem; /* Increased font size */
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 60%; /* Added rounded borders */
+  transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effect */
+}
+
+.nav-button.left {
+  left: -70px; /* Adjusted for larger button */
+}
+
+.nav-button.right {
+  right: -70px; /* Adjusted for larger button */
+}
+
+.nav-button:hover {
+  background-color: rgba(224, 113, 33, 0.8); /* Changed color on hover */
+  transform: scale(1.2); /* Scale up on hover */
 }
 
 @keyframes fadeIn {
@@ -55,4 +83,34 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.ppt-content.slide-in {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.ppt-content.slide-out {
+  animation: slideOut 0.5s ease-in-out;
 }

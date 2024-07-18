@@ -15,6 +15,14 @@ const Roadmap = () => {
     document.getElementById('ppt-container').scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleNext = () => {
+    setCurrentStep((prevStep) => (prevStep !== null && prevStep < steps.length - 1 ? prevStep + 1 : prevStep));
+  };
+
+  const handlePrevious = () => {
+    setCurrentStep((prevStep) => (prevStep !== null && prevStep > 0 ? prevStep - 1 : prevStep));
+  };
+
   const steps = [
     { title: 'Step 1: Click for details', name: 'Receive Diagnosis', top: '27%', left: '77%' },
     { title: 'Step 2: Click for details', name: 'Adjustment Process', top: '39%', left: '2%' },
@@ -46,14 +54,18 @@ const Roadmap = () => {
       </div>
       <div id="ppt-container" className="ppt-container">
         {currentStep !== null && (
-          <div className="ppt-content">
-            {currentStep === 0 && <ReceiveDiagnosis />}
-            {currentStep === 1 && <AdjustmentProcess />}
-            {currentStep === 2 && <IdentifyGoals />}
-            {currentStep === 3 && <StayConnected />}
-            {currentStep === 4 && <BeActive />}
-            {currentStep === 5 && <EmpowerOthers />}
-          </div>
+          <>
+            <button className="nav-button left" onClick={handlePrevious}>❮</button>
+            <button className="nav-button right" onClick={handleNext}>❯</button>
+            <div className="ppt-content">
+              {currentStep === 0 && <ReceiveDiagnosis />}
+              {currentStep === 1 && <AdjustmentProcess />}
+              {currentStep === 2 && <IdentifyGoals />}
+              {currentStep === 3 && <StayConnected />}
+              {currentStep === 4 && <BeActive />}
+              {currentStep === 5 && <EmpowerOthers />}
+            </div>
+          </>
         )}
       </div>
     </div>

@@ -26,6 +26,12 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+.technology-card audio {
+  width: 100%;
+  max-width: 250px; /* Adjust max-width as needed */
+  margin-top: 10px;
+}
+
 .technology-card img {
   border-radius: 8px;
   max-width: 100%;
