@@ -20,9 +20,9 @@ const Support = () => {
       backgroundColor: '#d1ecf1', // Light blue
     },
     {
-      title: 'Story',
-      description: 'Explore real-life experiences of visually impaired individuals. These stories provide insights into their challenges, triumphs, and everyday life.',
-      link: '/support/story',
+      title: 'Technology',
+      description: 'Explore the various technologies designed to assist visually impaired individuals. From public facilities to essential tools, and advanced electronic software to innovative mobile applications.',
+      link: '/support/technology',
       backgroundColor: '#d4edda', // Light green
     },
   ];

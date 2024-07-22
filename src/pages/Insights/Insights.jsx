@@ -18,13 +18,7 @@ const Insights = () => {
       description: 'Explore the transformative journey of the visually impaired in America, from early marginalization to today\'s support and technological advancements, uncovering key milestones in societal evolution.',
       link: '/insights/history',
       backgroundColor: '#d1ecf1', // Light blue
-    },
-    {
-      title: 'Experience',
-      description: 'Engage in an interactive game to learn about assistive technologies for the visually impaired, discovering innovative solutions and their impact.',
-      link: '/insights/experience',
-      backgroundColor: '#d4edda', // Light green
-    },
+    }
   ];
 
   return (

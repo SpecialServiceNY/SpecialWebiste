@@ -27,8 +27,8 @@ const About = () => {
         About Me <span className="click-for-details">(click for details)</span>
       </h2>
       <div className="up">
-          <img className="profile-photo" src={`${process.env.PUBLIC_URL}/profile-photo.jpg`} alt="Profile" />
-          <p className="name">Qingxuan Chen (Xander)</p>
+          <img className="profile-photo" src={`${process.env.PUBLIC_URL}/profile.jpg`} alt="Profile" />
+          <p className="name">Qingxuan Chen</p>
         </div>
       <div className="section-content">
         
