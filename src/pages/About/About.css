@@ -58,8 +58,13 @@
 }
 
 .about-me-content .photo {
-  margin-bottom: 20px; /* 调整图片与文字之间的间距 */
+  margin-bottom: 10px; /* 调整图片与文字之间的间距 */
   flex: 0 0 auto;
+}
+
+.profile-photo {
+  width: 20%;
+  height: auto; /* Maintain aspect ratio */
 }
 
 .name {
