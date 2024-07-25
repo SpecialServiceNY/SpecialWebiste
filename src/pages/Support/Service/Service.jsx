@@ -431,6 +431,28 @@ const Service = () => {
         },
       );
     }
+    if (selectedLocation === 4 && selectedAgeRange === 1 && selectedServiceType === 1) {
+      results.push(
+        {
+          id: 41,
+          text: 'Visually Impaired Education Program (V.I.E.P.)',
+          description: 'The Visually Impaired Education Program (V.I.E.P.) provides an opportunity for elementary school children (Pre-K to 5) to learn how to positively and respectively interact with the blind and visually impaired community.',
+          imageUrl: 'https://i0.wp.com/blindmotherhood.com/wp-content/uploads/2018/07/23472278_385320081921730_8632536783423804293_n.jpg?w=960&ssl=1',
+          website: 'https://blindmotherhood.com/viep/'
+        },
+      );
+    }
+    if (selectedLocation === 4 && selectedAgeRange === 3 && selectedServiceType === 1) {
+      results.push(
+        {
+          id: 42,
+          text: 'College of Staten Island',
+          description: 'Teachers and School Leaders make a difference in the lives of children, families, and communities as they use their professional knowledge to create classrooms where all children experience the opportunity to be successful in school and in life. In the School of Education Department, you will learn how to understand the lives of your students and apply your knowledge to creating instruction that meets the needs of all learners.',
+          imageUrl: 'https://www.cs.csi.cuny.edu/images/graduation2.jpg',
+          website: 'https://www.csi.cuny.edu/admissions/graduate-admissions/graduate-programs-and-requirements/education'
+        },
+      );
+    }
     setSearchResults(results);
   };
 

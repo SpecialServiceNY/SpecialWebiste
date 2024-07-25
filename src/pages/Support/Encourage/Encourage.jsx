@@ -65,6 +65,7 @@ const Encourage = () => {
       content: "Whether you are sighted or visually impaired",
       poppedContent: `
         <h1 style={{color: 'red'}}>“You might be the envy of others.”</h1>
+        <small>Credit to Glad_Panic186</small>
         <h2>What you want to let go of could be something others desperately wish for. Don’t choose to be a coward. The cards are in your hands. Hold on to them tightly and play them wisely.</h2>
       `,
       popped: false,
@@ -153,6 +154,7 @@ const Encourage = () => {
         <h1>Encouragement</h1>
         <div className='page-p'>
         <p>Click on the bubble to break the nonsense.</p>
+        <p>All text in red is adapted or quoted from comments made by reddit users.</p>
         <p>If some bubbles are not displayed correctly, please refresh the page.</p> 
         <p>Please note that the bubbles will move randomly across the screen</p>
         </div>

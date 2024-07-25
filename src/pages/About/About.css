@@ -65,6 +65,7 @@
 .profile-photo {
   width: 20%;
   height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
 }
 
 .name {
