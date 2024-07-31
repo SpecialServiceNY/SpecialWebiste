@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHighContrast } from '../../../components/HighContrastContext';
 import './Definition.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -60,6 +60,7 @@ const Definition = () => {
                   className={`chart-image ${isImageZoomed ? 'zoomed' : ''}`}
                   onClick={handleImageZoomToggle}
                 />
+                <p className="image-credit">Credit to: Atlantic Eye Institute</p>
                 {isImageZoomed && (
                   <div className="zoom-icon" onClick={handleImageZoomToggle}>
                     <FontAwesomeIcon icon={faSearchPlus} />
@@ -83,10 +84,6 @@ const Definition = () => {
               </p>
               <p>
                 The Snellen chart, developed by Dutch ophthalmologist Herman Snellen in the 1860s, is the most common chart used for assessing visual acuity. It consists of letters arranged in decreasing size, used to measure how well you can see at various distances.
-              </p>
-              <p>
-              Reference:
-              American Academy of Ophthalmology. (2022). <a href="https://www.aao.org/eye-health/tips-prevention/what-does-20-20-vision-mean">What Does 20/20 Vision Mean?</a>. Retrieved from <a href="https://www.aao.org">https://www.aao.org</a>.
               </p>
             </>
           ) : (
@@ -124,6 +121,7 @@ const Definition = () => {
                   alt="Peripheral Vision"
                   className="vision-image"
                 />
+                <p className="image-credit">Credit to: <a href='https://www.semanticscholar.org/paper/A-Hazard-Detection-and-Tracking-System-for-People-Younis-Al-Nuaimy/a8e2e3f873cdf2fa59978235c468998541e607fd'>an academic paper</a></p>
               </div>
               <p>
                 If you’ve ever seen something “out of the corner of your eye,” you’re talking about your peripheral vision. Indirect vision is another term for peripheral vision.
@@ -140,11 +138,8 @@ const Definition = () => {
                   alt="Peripheral Vision"
                   className="vision-image"
                 />
+                <p className="image-credit">Credit to: Assil Gaur Eye Institute</p>
               </div>
-              <p>
-              Reference:
-              American Academy of Ophthalmology. (2022). <a href="https://www.aao.org/eye-health/symptoms/vision-loss-peripheral-side">Vision Loss, Peripheral (Side)</a>. Retrieved from <a href="https://www.aao.org">https://www.aao.org</a>.
-              </p>
             </>
           ) : (
             <iframe
@@ -169,21 +164,36 @@ const Definition = () => {
           )}
         </div>
       </div>
-      <div className="additional-content">
-        <p className="highlighted">Thank you for exploring the definition of visually impairment.</p>
-        <p>Learn more about the frequently asked questions towards visually impaired individuals:</p>
-        <ul>
-          <li><a href="./FAQ">FAQ</a></li>
-        </ul>
-        <p>Learn more about the causes of visually impairment:</p>
-        <ul>
-          <li><a href="./Causes">Occupation</a></li>
-        </ul>
-        <p>Learn more about the frequently asked questions towards blind people:</p>
-        <ul>
-          <li><a href="./FAQ">FAQ</a></li>
-        </ul>
+      <div className="info-bar">
+        <p>
+          <strong>Sources:</strong>
+        </p>
+        <p>
+          <a href="https://www.aao.org/eye-health/tips-prevention/what-does-20-20-vision-mean">
+            What Does 20/20 Vision Mean?
+          </a>
+        </p>
+        <p>
+          <a href="https://www.aao.org/eye-health/symptoms/vision-loss-peripheral-side">
+            Vision Loss, Peripheral (Side)
+          </a>
+        </p>
       </div>
+      <div className="additional-content">
+             <p className="highlighted">Thank you for exploring the definition of legal blindness.</p>
+            <p>Learn more about the causes of visual blindness:</p>
+            <ul>
+              <li><a href="./Causes">Causes</a></li>
+            </ul>
+            <p>Learn more about the occupations that blind people can pursue:</p>
+            <ul>
+              <li><a href="./Occupation">Occupation</a></li>
+            </ul>
+            <p>Learn more about the frequently asked questions towards blind people:</p>
+            <ul>
+              <li><a href="./FAQ">FAQ</a></li>
+            </ul>
+          </div>
     </div>
   );
 };

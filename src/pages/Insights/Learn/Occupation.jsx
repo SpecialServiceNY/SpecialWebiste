@@ -8,6 +8,7 @@ const Occupation = () => {
   const changeImage = (answer) => {
     const image = answer.querySelector('img');
     const details = answer.querySelector('.details');
+    const credit = answer.querySelector('.credit');
 
     const originalSrc = image.getAttribute('data-original-src');
     const newSrc = image.getAttribute('data-new-src');
@@ -16,9 +17,11 @@ const Occupation = () => {
     if (currentSrc === originalSrc) {
       image.src = newSrc;
       currentSrc = newSrc;
+      credit.classList.remove('hidden'); // 显示 credit 信息
     } else {
       image.src = originalSrc;
       currentSrc = originalSrc;
+      credit.classList.add('hidden'); // 隐藏 credit 信息
     }
 
     image.setAttribute('data-current-src', currentSrc);
@@ -50,9 +53,10 @@ const Occupation = () => {
                 src={`${process.env.PUBLIC_URL}/teacher.jpg`}
                 alt="Teacher"
                 data-original-src={`${process.env.PUBLIC_URL}/teacher.jpg`}
-                data-new-src={`${process.env.PUBLIC_URL}/blind teacher.jpg`}
+                data-new-src="https://npr.brightspotcdn.com/dims4/default/b092f28/2147483647/strip/true/crop/6016x4016+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F9d%2Faf%2Ff2b779a74e9298cdc6eea55fb2ef%2F22-65001.jpg"
                 data-current-src={`${process.env.PUBLIC_URL}/teacher.jpg`}
               />
+              <p className="credit hidden">Credit to Natalie Shaheen</p>
             </div>
             <div className="details hidden">
               <p className="small">It's no wonder then that many students consider teaching as a career. Many blind students think about this, too. But they may also wonder how a blind person could do the job. The National Association of Blind Educators, a division of the National Federation of the Blind, is an organization of blind teachers. These teachers share information with each other. They also try to help young blind people who are considering a career in education. The following article, reprinted from the Spring/Summer, 1993 issue of The Blind Educator, a publication of the National Association of Blind Educators, answers many of the questions sighted and blind people commonly ask about how blind teachers can do their job.</p>
@@ -70,6 +74,7 @@ const Occupation = () => {
                 data-new-src={`${process.env.PUBLIC_URL}/blind nurse.jpg`}
                 data-current-src={`${process.env.PUBLIC_URL}/Nurse.jpg`}
               />
+              <p className="credit hidden">Credit to The Times and The Sunday Times</p>
             </div>
             <div className="details hidden">
               <p>Absolutely, you can be a nurse if you have a visual disability. The ADA Amendments specify that mitigating measures or devices such as special eye wear cannot be considered in determining whether a person has an impairment that substantially limits a major life activity (the criterion for protection under the ADA).</p>
@@ -87,6 +92,7 @@ const Occupation = () => {
                 data-new-src={`${process.env.PUBLIC_URL}/blind architect.jpg`}
                 data-current-src={`${process.env.PUBLIC_URL}/architect.jpg`}
               />
+              <p className="credit hidden">Credit to Lighthouse News</p>
             </div>
             <div className="details hidden">
               <p>Chris Downey is an architect who designs buildings with acoustics and accessibility in mind. When Chris lost his vision suddenly 10 years ago due to a brain tumor, he stayed in his field and applied his new sense of space to his designs.</p>
@@ -105,6 +111,7 @@ const Occupation = () => {
                 data-new-src={`${process.env.PUBLIC_URL}/blind journalist.jpg`}
                 data-current-src={`${process.env.PUBLIC_URL}/Journalist.jpg`}
               />
+              <p className="credit hidden">Credit to Cherylgabriel</p>
             </div>
             <div className="details hidden">
               <p>Gary O'Donoghue is a British journalist, currently working for BBC News in Washington, D.C. as one of their North America political correspondents. He is one of the most prominent blind correspondents in British media.</p>
@@ -123,6 +130,7 @@ const Occupation = () => {
                 data-new-src={`${process.env.PUBLIC_URL}/blind worker.jpg`}
                 data-current-src={`${process.env.PUBLIC_URL}/warehouse worker.jpg`}
               />
+              <p className="credit hidden">Credit to KETV</p>
             </div>
             <div className="details hidden">
               <p>There are over a hundred blind people working in Amazon warehouses in New York alone. This would have been deemed impossible a decade ago!</p>
@@ -147,6 +155,7 @@ const Occupation = () => {
                 data-new-src={`${process.env.PUBLIC_URL}/AI Pilot.png`}
                 data-current-src={`${process.env.PUBLIC_URL}/pilot.jpg`}
               />
+              <p className="credit hidden">Credit to AI Technology</p>
             </div>
             <div className="details hidden">
               <p>Currently, being a pilot is impossible for blind people. However, with AI-powered assistance technology, it may become a reality in the next decade.</p>
@@ -157,21 +166,20 @@ const Occupation = () => {
 
         {/* Thank You message */}
         <div id="thankYouMessage" className="hidden additional-content">
-          <p className="highlighted">Thank you for exploring the careers available to visually impaired individuals.</p>
+          <p className="highlighted">Thank you for exploring the careers available to visually impaired people. With the advancement of technology, the possibilities are expanding. Feel free to click on the images to learn more.</p>
           <p>Learn more about the definition of legal blindness:</p>
-        <ul>
-        <li><a href="./Definition">Definition</a></li>
-        </ul>
-          <p>Learn more about the causes of visually impairment:</p>
-        <ul>
-        <li><a href="./Causes">Occupation</a></li>
-        </ul>
-          <p>Learn more about the frequently asked questions towards blind people:</p>
-        <ul>
-        <li><a href="./FAQ">FAQ</a></li>
-        </ul>
-      </div>
-
+    <ul>
+      <li><a href="./Definition">Definition</a></li>
+    </ul>
+    <p>Learn more about the causes of visual impairment:</p>
+    <ul>
+      <li><a href="./Causes">Causes</a></li>
+    </ul>
+    <p>Learn more about the frequently asked questions towards blind people:</p>
+    <ul>
+      <li><a href="./FAQ">FAQ</a></li>
+    </ul>
+        </div>
       </div>
     </div>
   );

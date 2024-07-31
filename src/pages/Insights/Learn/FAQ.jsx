@@ -83,24 +83,22 @@ const FAQ = () => {
           onClick={() => handleCardClick(3)}
         />
 
-        {allCardsClicked && (
-          <div id="thankYouMessage" className="additional-content">
-            <p className="highlighted">Thank you for exploring the frequently asked questions towards visually impaired individuals.</p>
-            <p>Learn more about the definition of legal blindness:</p>
-            <ul>
-              <li><a href="./Definition">Definition</a></li>
-            </ul>
-            <p>Learn more about the causes of visually impairment:</p>
-            <ul>
-              <li><a href="./Causes">Causes</a></li>
-            </ul>
-            <p>Learn more about the frequently asked questions towards blind people:</p>
-            <ul>
-              <li><a href="./Occupation">Occupation</a></li>
-            </ul>
-          </div>
-        )}
       </div>
+      <div className="additional-content">
+          <p className="highlighted">Thank you for exploring the frequently asked questions for blind people.</p>
+          <p>Learn more about the definition of legal blindness:</p>
+         <ul>
+           <li><a href="./Definition">Definition</a></li>
+         </ul>
+         <p>Learn more about the causes of visual blindness:</p>
+         <ul>
+           <li><a href="./Causes">Causes</a></li>
+         </ul>
+         <p>Learn more about the occupations that blind people can pursue:</p>
+         <ul>
+           <li><a href="./Occupation">Occupation</a></li>
+         </ul>
+       </div>
     </div>
   );
 };

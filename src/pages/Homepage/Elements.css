@@ -15,10 +15,9 @@
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 400px;
 }
 
 .element-card:hover {
@@ -40,7 +39,6 @@
 
 .element-card button {
   padding: 10px 20px;
-  margin-top: auto;
   border: none;
   border-radius: 5px;
   background-color: #007bff;
@@ -56,8 +54,7 @@
 
 .element-details {
   position: relative;
-  height: 100%;
-  width: 100%;
+  grid-row: 1 / span 2; /* Span over two rows */
 }
 
 .element-details .background-blur {
@@ -97,11 +94,11 @@
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
-  font-size: 20px; /* 增大字体 */
-  background-color: #fff; /* 更换背景颜色 */
+  font-size: 20px; /* Increase font size */
+  background-color: #fff; /* Change background color */
   padding: 10px;
   border-radius: 5px;
-  margin: auto; /* 将按钮居中 */
+  margin: auto; /* Center button */
 }
 
 .element-details .link-button span {
@@ -115,7 +112,6 @@
 }
 
 .element-details .back-button {
-  margin-top: auto; /* 将按钮推到卡片底部 */
   background-color: #eea73e;
   color: white;
 }
@@ -124,7 +120,7 @@
   background-color: #f8c009;
 }
 
-/* 响应式样式 */
+/* Responsive styles */
 @media (max-width: 768px) {
   .element-card {
     flex: 0 0 calc(50% - 20px);
@@ -135,4 +131,11 @@
   .element-card {
     flex: 0 0 100%;
   }
+}
+
+.image-credit {
+  font-size: 0.875rem;
+  color: #555;
+  margin-top: 0.5rem;
+  margin-bottom: 10px; /* Ensure some space below */
 }
