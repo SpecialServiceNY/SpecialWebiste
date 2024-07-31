@@ -16,6 +16,7 @@ const technologies = [
     title: 'Accessible Washer And Dryer',
     description: 'The controls of washers and dryers differ from brand to brand. Some have an easy-to-feel point on the control dial. The dial clicks as you move from cycle to cycle, making it easy and predictable to set.',
     image: 'https://images.squarespace-cdn.com/content/v1/5a36eb7bd74cffbd7ebfde35/414a5146-3a8b-49a9-bd74-f8a2f472df1f/Washer-Dryer+Clear+Spaces+Overlapping.png',
+    source: 'Provided by: US Access Board',
     video: 'https://www.youtube.com/embed/9odfPWiJWOA?si=V720AEO16zBARfNq',
     source: 'Credit to: The Blind Life'
   },
@@ -24,6 +25,7 @@ const technologies = [
     title: 'closed-circuit television (CCTV)',
     description: 'A video magnifier, or closed-circuit television (CCTV) system, uses a stand-mounted or handheld video camera to project a magnified image onto a video monitor, a television (TV) screen, or a computer monitor. Cameras with zoom lenses provide variable magnification.',
     image: 'https://www.perkins.org/wp-content/uploads/2022/07/Video-Magnifier-Picture-Cropped.jpg',
+    source: 'Credit to Perkins School for the Blind',
     audio: `${process.env.PUBLIC_URL}/CCTV.MP3`,
     source: 'Listen to Khadija Bari'
   },
@@ -107,6 +109,7 @@ const Technology = () => {
     <div className={`legally-blind-container ${isHighContrast ? 'high-contrast' : ''}`}>
     <div className="technology-page">
       <h1>Technologies for Visually Impaired People</h1>
+      <h2>All the information on this page is based on the <a href="https://www.afb.org/blindness-and-low-vision/using-technology/assistive-technology-products">American Foundation for the Blind's Assistive Technology Products page</a>.</h2>
       <div className="technology-cards">
         {technologies.map((tech) => (
           <div key={tech.id} className="technology-card">

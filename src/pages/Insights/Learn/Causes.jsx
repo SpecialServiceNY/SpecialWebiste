@@ -33,6 +33,7 @@ const Causes = () => {
         <div className="page-header">
           <h1>Causes of Visual Impairment</h1>
           <p>Explore the various causes of visual impairment and learn more about their effects and treatments.</p>
+          <p>The information on this page is based on the <a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases">National Eye Institute's Eye Conditions and Diseases page</a>.</p>
         </div>
 
         <div className="tabs">
@@ -71,7 +72,7 @@ const Causes = () => {
         <div className="tab-content">
           {activeTab === 'RefractiveErrors' && (
             <div>
-              <h2>Refractive Errors</h2>
+              <h2><a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/refractive-errors#:~:text=Refractive%20errors%20are%20a%20type,common%20type%20of%20vision%20problem.">Refractive Errors</a></h2>
               <p>Refractive errors occur when the shape of the eye prevents light from focusing directly on the retina, leading to blurred vision.</p>
               <p>Common types include nearsightedness (myopia), farsightedness (hyperopia), and astigmatism.</p>
               <p>Treatment options include eyeglasses, contact lenses, and refractive surgery.</p>
@@ -80,7 +81,7 @@ const Causes = () => {
 
           {activeTab === 'Cataracts' && (
             <div>
-              <h2>Cataracts</h2>
+              <h2><a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/cataracts">Cataracts</a></h2>
               <p>Cataracts cause clouding of the lens in the eye, leading to blurry vision and eventually blindness if untreated.</p>
               <p>Age-related cataracts are most common, but they can also be caused by injury, medications, or other health conditions.</p>
               <p>Treatment involves surgical removal of the cloudy lens and replacement with an artificial lens.</p>
@@ -89,7 +90,7 @@ const Causes = () => {
 
           {activeTab === 'DiabeticRetinopathy' && (
             <div>
-              <h2>Diabetic Retinopathy</h2>
+              <h2><a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/diabetic-retinopathy#:~:text=Diabetic%20retinopathy%20is%20caused%20by,your%20eye%20(optic%20nerve).">Diabetic Retinopathy</a></h2>
               <p>Diabetic retinopathy is a complication of diabetes that affects the blood vessels in the retina, leading to vision loss.</p>
               <p>It can cause leaking of blood vessels, swelling of the retina, and growth of abnormal blood vessels.</p>
               <p>Treatment includes managing diabetes through diet, exercise, and medication, along with laser surgery or injections to reduce vision loss.</p>
@@ -98,7 +99,7 @@ const Causes = () => {
 
           {activeTab === 'Glaucoma' && (
             <div>
-              <h2>Glaucoma</h2>
+              <h2><a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/glaucoma#:~:text=What%20is%20glaucoma%3F,a%20comprehensive%20dilated%20eye%20exam.">Glaucoma</a></h2>
               <p>Glaucoma is a group of eye conditions that damage the optic nerve, often due to high pressure inside the eye.</p>
               <p>It can lead to gradual loss of peripheral vision and, if untreated, blindness.</p>
               <p>Treatment aims to lower intraocular pressure through eye drops, medications, laser surgery, or conventional surgery.</p>
@@ -107,7 +108,7 @@ const Causes = () => {
 
           {activeTab === 'MacularDegeneration' && (
             <div>
-              <h2>Age-related Macular Degeneration</h2>
+              <h2><a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration#:~:text=Age%2Drelated%20macular%20degeneration%20(AMD)%20is%20an%20eye%20disease,the%20back%20of%20the%20eye).">Age-related Macular Degeneration</a></h2>
               <p>Age-related macular degeneration (AMD) affects the macula, the central part of the retina responsible for sharp central vision.</p>
               <p>It can cause blurred or distorted vision, making it difficult to read or recognize faces.</p>
               <p>Treatment includes lifestyle changes, dietary supplements, and certain medications, but there is no cure.</p>

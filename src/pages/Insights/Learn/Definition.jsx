@@ -84,6 +84,10 @@ const Definition = () => {
               <p>
                 The Snellen chart, developed by Dutch ophthalmologist Herman Snellen in the 1860s, is the most common chart used for assessing visual acuity. It consists of letters arranged in decreasing size, used to measure how well you can see at various distances.
               </p>
+              <p>
+              Reference:
+              American Academy of Ophthalmology. (2022). <a href="https://www.aao.org/eye-health/tips-prevention/what-does-20-20-vision-mean">What Does 20/20 Vision Mean?</a>. Retrieved from <a href="https://www.aao.org">https://www.aao.org</a>.
+              </p>
             </>
           ) : (
             <iframe
@@ -137,6 +141,10 @@ const Definition = () => {
                   className="vision-image"
                 />
               </div>
+              <p>
+              Reference:
+              American Academy of Ophthalmology. (2022). <a href="https://www.aao.org/eye-health/symptoms/vision-loss-peripheral-side">Vision Loss, Peripheral (Side)</a>. Retrieved from <a href="https://www.aao.org">https://www.aao.org</a>.
+              </p>
             </>
           ) : (
             <iframe

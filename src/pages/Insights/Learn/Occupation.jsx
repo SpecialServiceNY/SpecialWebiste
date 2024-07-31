@@ -108,7 +108,6 @@ const Occupation = () => {
             </div>
             <div className="details hidden">
               <p>Gary O'Donoghue is a British journalist, currently working for BBC News in Washington, D.C. as one of their North America political correspondents. He is one of the most prominent blind correspondents in British media.</p>
-              <a href="https://nfb.org/sites/default/files/images/nfb/publications/fr/fr35/4/fr350410.htm" target="_blank" className="read-more">Read More</a>
               <a href="https://www.perkins.org/resource/its-my-job-podcast-21-gary-odonoghue/" target="_blank" className="read-more">Listen More</a>
             </div>
           </div>
@@ -128,10 +127,10 @@ const Occupation = () => {
             <div className="details hidden">
               <p>There are over a hundred blind people working in Amazon warehouses in New York alone. This would have been deemed impossible a decade ago!</p>
               <audio controls>
-                <source src={`${process.env.PUBLIC_URL}/audio/Amazon Warehouse.MP3`} type="audio/mpeg" />
+                <source src={`${process.env.PUBLIC_URL}/Amazon Warehouse.MP3`} type="audio/mpeg" />
               </audio>
               <audio controls>
-                <source src={`${process.env.PUBLIC_URL}/audio/Amazon Warehouse2.MP3`} type="audio/mpeg" />
+                <source src={`${process.env.PUBLIC_URL}/Amazon Warehouse2.MP3`} type="audio/mpeg" />
               </audio>
               <a href="https://nfb.org/about-us/press-room/amazon-make-more-employment-opportunities-available-blind" target="_blank" className="read-more">Read More</a>
             </div>
