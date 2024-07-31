@@ -23,10 +23,13 @@ const ReceiveDiagnosis = () => {
             </p>
           </div>
           <div className="audio">
-            <p className="audio-caption">Listen to Kadija's story:</p>
+            <p className="audio-caption"><a href="https://www.linkedin.com/in/khadijahasan/">Listen to Kadija's story</a>:</p>
             <audio controls>
               <source src="/Kadija experience 2.MP3" type="audio/mp3" />
             </audio>
+            <p className="audio-source">
+              This audio is quoted from an interview.
+            </p>
             </div>
             <div className="instructions">
             <h2>How to Obtain an Eye Examination:</h2>

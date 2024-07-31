@@ -23,10 +23,13 @@ const StayConnected = () => {
             </p>
           </div>
           <div className="audio">
-            <p className="audio-caption">Listen to Carl's story:</p>
+            <p className="audio-caption"><a href="https://nfb.org/sites/default/files/images/nfb/publications/bm/bm10/bm1005/bm100503.htm">Listen to Carl's story</a>:</p>
             <audio controls>
               <source src="/Carl-Jacobsen.wav" type="audio/mp3" />
             </audio>
+            <p className="audio-source">
+              This audio is quoted from the New York State Commission for the Blind's Testimonials page: <a href="https://ocfs.ny.gov/programs/nyscb/employers/testimonials.php">https://ocfs.ny.gov/programs/nyscb/employers/testimonials.php</a>
+            </p>
             </div>
             <div className="instructions">
             <h2>Find your community:</h2>

@@ -23,11 +23,14 @@ const AdjustmentProcess = () => {
             </p>
           </div>
           <div className="audio">
-            <p className="audio-caption">Listen to Pratik's story:</p>
+            <p className="audio-caption"><a href="https://www.linkedin.com/in/pratikp1/">Listen to Pratik's story</a>:</p>
             <audio controls>
               <source src="/Pratik-Patel.wav" type="audio/mp3" />
             </audio>
-            </div>
+            <p className="audio-source">
+              This audio is quoted from the New York State Commission for the Blind's Testimonials page: <a href="https://ocfs.ny.gov/programs/nyscb/employers/testimonials.php">https://ocfs.ny.gov/programs/nyscb/employers/testimonials.php</a>
+            </p>
+          </div>
             <div className="instructions">
             <h2>What can counselling do:</h2>
             <p className="intro-text">

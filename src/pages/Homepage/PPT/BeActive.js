@@ -23,10 +23,13 @@ const BeActive = () => {
             </p>
           </div>
           <div className="audio">
-            <p className="audio-caption">Listen to Taisha's words:</p>
+            <p className="audio-caption"><a href="https://www.linkedin.com/in/taisha-ortiz-lmsw/">Listen to Taisha's words</a>:</p>
             <audio controls>
               <source src="/Roadmap - actively participate.MP3" type="audio/mp3" />
             </audio>
+            <p className="audio-source">
+              This audio is quoted from an interview.
+            </p>
             </div>
         </div>
       </div>

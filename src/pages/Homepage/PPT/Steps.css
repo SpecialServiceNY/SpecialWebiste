@@ -39,7 +39,12 @@
   font-style: italic;
   margin-top: 20px;
 }
-
+.audio-source{
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8rem; /* Adjust this value as needed */
+  color: rgb(60, 60, 60);
+}
 .instructions {
   text-align: left; /* Adjust alignment */
   margin-top: 20px;

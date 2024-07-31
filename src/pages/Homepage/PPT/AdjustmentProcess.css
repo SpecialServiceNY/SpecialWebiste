@@ -55,3 +55,10 @@
 .resources a:hover {
   text-decoration: underline;
 }
+
+.audio-source{
+  display: block;
+  margin-top: 5px;
+  font-size: 0.5rem; /* Adjust this value as needed */
+  color: gray;
+}
