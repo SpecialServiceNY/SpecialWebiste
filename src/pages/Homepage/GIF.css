@@ -1,5 +1,5 @@
 .content-area {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .container {
@@ -68,4 +68,11 @@
 
 .section h2:hover {
   color: #555;
+}
+
+.credit-text {
+  font-size: 13px;
+  color: #7e7c7c; /* 浅灰色 */
+  margin-top: 5px;
+  text-align: center;
 }

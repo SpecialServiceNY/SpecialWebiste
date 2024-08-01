@@ -38,13 +38,13 @@ const Community = () => {
     },
     {
       name: 'Bronx Independent Living Services (BILS)',
-      logo: 'https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/445348369_879789930844188_4619134655651299749_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0a50KHL8SNEQ7kNvgHy2fBX&_nc_ht=scontent-lga3-2.xx&oh=00_AYDX4WCOkARvoGzmXi3bwbtiARZqX30cFGxkKMsdIl-RUA&oe=66863E03',
+      logo: 'https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/446925180_876704794486035_884250874267185988_n.jpg?stp=dst-jpg_p960x960&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=CFinrNiO8ZUQ7kNvgEt92tU&_nc_ht=scontent-lga3-2.xx&gid=As-99ECrkeI-LjXHxofqaKW&oh=00_AYDgWKTUy3su-FeBhA_SircKFnKR6WLPtWL6vHS18SjH1w&oe=66B16FA8',
       description: 'Bronx Independent Living Services (BILS) is a non-profit, community based organization dedicated to empower all people with disabilities to understand and exercise their civil and human rights in order to live fully integrated lives in mainstream society. BILS assists individuals by providing them the necessary tools to make informed decisions about their own lives through access to education, skills development, and access to the appropriate resources. On a systemic level, BILS is committed to facilitating social, economic, and civic change by advocating for the removal of architectural, communication, and attitudinal barriers that have limited the disabled community for far too long.',
       url: 'https://bils.org/',
     },
     {
       name: 'Staten Island Center for Independent Living',
-      logo: 'https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/441406754_930151778908860_14220972826964165_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=U_Q6XEeA3LgQ7kNvgHOUzQH&_nc_ht=scontent-lga3-2.xx&oh=00_AYClGDVqHFkzvTcmQe2KKSIRQqGv8QK5iTYVKnlZtdstIQ&oe=66864469',
+      logo: 'https://www.silive.com/resizer/v2/https%3A%2F%2Fadvancelocal-adapter-image-uploads.s3.amazonaws.com%2Fimage.silive.com%2Fhome%2Fsilive-media%2Fwidth2048%2Fimg%2Fgracelyns_chronicles%2Fphoto%2F19681327-large.jpg?auth=aca9ae66c5909f6b701015626bc9e403df94d53b31c5589cc9e104b31804a60e&width=1280&quality=90',
       description: 'The Staten Island Center for Independent Living is the only comprehensive multi-service provider in the borough that is primarily staffed and governed by individuals who have personal experience with disability.',
       url: 'https://www.siciliving.org/',
     },

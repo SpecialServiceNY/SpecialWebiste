@@ -15,6 +15,7 @@ const GIF = React.forwardRef((props, ref) => {
             <p className="smaller-text">A journey that you might never SEE</p>
           </div>
         </div>
+        <p className="credit-text">Video credit: VideoLand</p> {/* 添加这一行 */}
       </div>
     </div>
   );
